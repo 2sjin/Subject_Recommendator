@@ -25,6 +25,7 @@
         private void InitializeComponent() {
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -72,6 +73,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnSearch);
             this.groupBox1.Controls.Add(this.txtSearch);
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Location = new System.Drawing.Point(45, 27);
@@ -81,13 +83,22 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "교과목 검색";
             // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(544, 38);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(77, 25);
+            this.btnSearch.TabIndex = 2;
+            this.btnSearch.Text = "검색";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            // 
             // txtSearch
             // 
             this.txtSearch.BackColor = System.Drawing.SystemColors.Window;
             this.txtSearch.ForeColor = System.Drawing.SystemColors.GrayText;
             this.txtSearch.Location = new System.Drawing.Point(164, 38);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(457, 25);
+            this.txtSearch.Size = new System.Drawing.Size(362, 25);
             this.txtSearch.TabIndex = 1;
             this.txtSearch.Text = "(검색어를 입력하세요)";
             this.txtSearch.Enter += new System.EventHandler(this.txtSearch_Enter);
@@ -150,6 +161,8 @@
             // cbTerm2
             // 
             this.cbTerm2.AutoSize = true;
+            this.cbTerm2.Checked = true;
+            this.cbTerm2.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbTerm2.Location = new System.Drawing.Point(299, 34);
             this.cbTerm2.Name = "cbTerm2";
             this.cbTerm2.Size = new System.Drawing.Size(67, 19);
@@ -160,6 +173,8 @@
             // cbTerm1
             // 
             this.cbTerm1.AutoSize = true;
+            this.cbTerm1.Checked = true;
+            this.cbTerm1.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbTerm1.Location = new System.Drawing.Point(151, 34);
             this.cbTerm1.Name = "cbTerm1";
             this.cbTerm1.Size = new System.Drawing.Size(67, 19);
@@ -170,6 +185,8 @@
             // cbTeamUnknown
             // 
             this.cbTeamUnknown.AutoSize = true;
+            this.cbTeamUnknown.Checked = true;
+            this.cbTeamUnknown.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbTeamUnknown.Location = new System.Drawing.Point(447, 96);
             this.cbTeamUnknown.Name = "cbTeamUnknown";
             this.cbTeamUnknown.Size = new System.Drawing.Size(89, 19);
@@ -180,6 +197,8 @@
             // cbTeamNo
             // 
             this.cbTeamNo.AutoSize = true;
+            this.cbTeamNo.Checked = true;
+            this.cbTeamNo.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbTeamNo.Location = new System.Drawing.Point(299, 96);
             this.cbTeamNo.Name = "cbTeamNo";
             this.cbTeamNo.Size = new System.Drawing.Size(59, 19);
@@ -190,6 +209,8 @@
             // cbTeamYes
             // 
             this.cbTeamYes.AutoSize = true;
+            this.cbTeamYes.Checked = true;
+            this.cbTeamYes.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbTeamYes.Location = new System.Drawing.Point(151, 96);
             this.cbTeamYes.Name = "cbTeamYes";
             this.cbTeamYes.Size = new System.Drawing.Size(59, 19);
@@ -218,6 +239,8 @@
             // cbYear2
             // 
             this.cbYear2.AutoSize = true;
+            this.cbYear2.Checked = true;
+            this.cbYear2.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbYear2.Location = new System.Drawing.Point(151, 3);
             this.cbYear2.Name = "cbYear2";
             this.cbYear2.Size = new System.Drawing.Size(67, 19);
@@ -228,6 +251,8 @@
             // cbType2
             // 
             this.cbType2.AutoSize = true;
+            this.cbType2.Checked = true;
+            this.cbType2.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbType2.Location = new System.Drawing.Point(299, 65);
             this.cbType2.Name = "cbType2";
             this.cbType2.Size = new System.Drawing.Size(95, 19);
@@ -238,6 +263,8 @@
             // cbType1
             // 
             this.cbType1.AutoSize = true;
+            this.cbType1.Checked = true;
+            this.cbType1.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbType1.Location = new System.Drawing.Point(151, 65);
             this.cbType1.Name = "cbType1";
             this.cbType1.Size = new System.Drawing.Size(59, 19);
@@ -248,6 +275,8 @@
             // cbYear3
             // 
             this.cbYear3.AutoSize = true;
+            this.cbYear3.Checked = true;
+            this.cbYear3.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbYear3.Location = new System.Drawing.Point(299, 3);
             this.cbYear3.Name = "cbYear3";
             this.cbYear3.Size = new System.Drawing.Size(67, 19);
@@ -258,6 +287,8 @@
             // cbYear4
             // 
             this.cbYear4.AutoSize = true;
+            this.cbYear4.Checked = true;
+            this.cbYear4.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbYear4.Location = new System.Drawing.Point(447, 3);
             this.cbYear4.Name = "cbYear4";
             this.cbYear4.Size = new System.Drawing.Size(67, 19);
@@ -329,5 +360,6 @@
         private System.Windows.Forms.CheckBox cbType2;
         private System.Windows.Forms.CheckBox cbTerm2;
         private System.Windows.Forms.CheckBox cbTerm1;
+        private System.Windows.Forms.Button btnSearch;
     }
 }
