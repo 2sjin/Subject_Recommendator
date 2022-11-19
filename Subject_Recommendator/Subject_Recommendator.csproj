@@ -88,6 +88,7 @@
     <Compile Include="Boundary\FormTest.Designer.cs">
       <DependentUpon>FormTest.cs</DependentUpon>
     </Compile>
+    <Compile Include="Control\ControlDB.cs" />
     <Compile Include="Control\ControlDetail.cs" />
     <Compile Include="Control\ControlFavorite.cs" />
     <Compile Include="Control\ControlResult.cs" />

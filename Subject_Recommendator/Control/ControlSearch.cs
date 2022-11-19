@@ -8,43 +8,31 @@ using System.Data;
 using System.Data.OleDb;
 
 namespace Subject_Recommendator {
-    public class ControlSearch {
+    public class ControlSearch : ControlDB {
         // 교과목 List 프로퍼티
         public List<Subject> SubjectList { get; set; }
 
         // 생성자
         public ControlSearch() {
             SubjectList = new List<Subject>();
-            ConnDB();
+            OpenConnection();
+            CreateReader("SELECT * FROM SUBJECT");
+            RunQuery();
+            Close();
         }
 
-        // DB 연결 메소드(연결 지향)
-        public void ConnDB() {
-            // Connection 생성 및 Open
-            string conStr = "Provider=Microsoft.Jet.OLEDB.4.0; Data Source=test.mdb";
-            OleDbConnection conn = new OleDbConnection(conStr);
-            conn.Open();
-
-            OleDbCommand comm = new OleDbCommand("SELECT * FROM SUBJECT", conn);
-
-            // OleDbDataReader 생성
-            OleDbDataReader reader = comm.ExecuteReader();
-
-            // OleDbDataReader로 데이터 읽기
-            while (reader.Read()) {
+        // 추상 메소드 재정의
+        public override void RunQuery() {
+            while (Reader.Read()) {
                 Subject subject = new Subject();
-                int dummy = reader.GetInt32(0);
-                subject.Name = reader.GetString(1);
-                subject.Year = reader.GetInt32(2);
-                subject.Term = reader.GetInt32(3);
-                subject.LectureType = reader.GetString(4);
-                subject.TeamProject = reader.GetString(5);
+                int dummy = Reader.GetInt32(0);
+                subject.Name = Reader.GetString(1);
+                subject.Year = Reader.GetInt32(2);
+                subject.Term = Reader.GetInt32(3);
+                subject.LectureType = Reader.GetString(4);
+                subject.TeamProject = Reader.GetString(5);
                 SubjectList.Add(subject);
             }
-        
-            // Reader 및 Connection 닫기
-            reader.Close();
-            conn.Close();
         }
     }
 }
