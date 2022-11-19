@@ -36,6 +36,7 @@ namespace Subject_Recommendator {
 
         // 교과목 테이블 갱신
         public void UpdateTable() {
+            Table.Items.Clear();
             foreach (Subject s in ctrl.SubjectList) {
                 ListViewItem item = new ListViewItem();
                 item.Text = s.Name;
@@ -48,7 +49,11 @@ namespace Subject_Recommendator {
         }
 
         private void btnSearch_Click(object sender, EventArgs e) {
-
+            if (isShowPlaceHolder)
+                ctrl.Search("");
+            else
+                ctrl.Search(txtSearch.Text);
+            UpdateTable();
         }
     }
 }

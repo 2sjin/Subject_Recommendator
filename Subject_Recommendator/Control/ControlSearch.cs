@@ -25,8 +25,17 @@ namespace Subject_Recommendator {
             CloseConnection();
         }
 
+        // 메소드: 검색
+        public void Search(string name) {
+            OpenConnection();
+            reader = ExecuteQuery($"SELECT * FROM SUBJECT WHERE SUBJECT_NAME LIKE '%{name}%'");
+            RunAfterExecute();
+            CloseConnection();
+        }
+
         // 추상 메소드 재정의
         public override void RunAfterExecute() {
+            SubjectList.Clear();
             while (reader.Read()) {
                 Subject subject = new Subject();
                 int dummy = reader.GetInt32(0);
