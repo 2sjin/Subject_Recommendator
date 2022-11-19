@@ -96,6 +96,7 @@
             this.txtOutline.Location = new System.Drawing.Point(60, 245);
             this.txtOutline.Multiline = true;
             this.txtOutline.Name = "txtOutline";
+            this.txtOutline.ReadOnly = true;
             this.txtOutline.Size = new System.Drawing.Size(497, 152);
             this.txtOutline.TabIndex = 6;
             // 
