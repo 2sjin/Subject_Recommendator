@@ -48,11 +48,44 @@ namespace Subject_Recommendator {
             }
         }
 
+        private string GetFilterSQL() {
+            string filterStr = "";
+
+            filterStr += " AND LIMIT_YEAR IN(";
+            filterStr += cbYear2.Checked ? "2" : "null";
+            filterStr += ",";
+            filterStr += cbYear3.Checked ? "3" : "null";
+            filterStr += ",";
+            filterStr += cbYear4.Checked ? "4" : "null";
+
+            filterStr += ") AND TERM IN(";
+            filterStr += cbTerm1.Checked ? "1" : "null";
+            filterStr += ",";
+            filterStr += cbTerm2.Checked ? "2" : "null";
+
+            filterStr += ") AND LECTURE_TYPE IN(";
+            filterStr += cbType1.Checked ? "'이론'" : "null";
+            filterStr += ",";
+            filterStr += cbType2.Checked ? "'이론/실습'" : "null";
+
+            filterStr += ") AND TEAM_PROJECT IN(";
+            filterStr += cbYear2.Checked ? "'있음'" : "null";
+            filterStr += ",";
+            filterStr += cbYear3.Checked ? "'없음'" : "null";
+            filterStr += ",";
+            filterStr += cbYear4.Checked ? "'불확실함'" : "null";
+            filterStr += ")";
+
+            return filterStr;
+        }
+
+        // 검색 버튼 클릭 시 이벤트
         private void btnSearch_Click(object sender, EventArgs e) {
+
             if (isShowPlaceHolder)
-                ctrl.Search("");
+                ctrl.Search("", GetFilterSQL());
             else
-                ctrl.Search(txtSearch.Text);
+                ctrl.Search(txtSearch.Text, GetFilterSQL());
             UpdateTable();
         }
     }

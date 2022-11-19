@@ -26,9 +26,10 @@ namespace Subject_Recommendator {
         }
 
         // 메소드: 검색
-        public void Search(string name) {
+        public void Search(string name, string filter) {
+            string sql = $"SELECT * FROM SUBJECT WHERE SUBJECT_NAME LIKE '%{name}%'" + filter;
             OpenConnection();
-            reader = ExecuteQuery($"SELECT * FROM SUBJECT WHERE SUBJECT_NAME LIKE '%{name}%'");
+            reader = ExecuteQuery(sql);
             RunAfterExecute();
             CloseConnection();
         }
