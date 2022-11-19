@@ -22,15 +22,6 @@ namespace Subject_Recommendator {
             CloseConnection();
         }
 
-        // 메소드: 검색
-        public void Search(string name, string filter) {
-            string sql = $"SELECT * FROM SUBJECT WHERE SUBJECT_NAME LIKE '%{name}%'" + filter;
-            OpenConnection();
-            reader = ExecuteQuery(sql);
-            RunAfterExecute();
-            CloseConnection();
-        }
-
         // 추상 메소드 재정의: SQL문 실행 후처리
         public override void RunAfterExecute() {
             SubjectList.Clear();
@@ -45,6 +36,16 @@ namespace Subject_Recommendator {
                 SubjectList.Add(subject);
             }
             reader.Close();
+        }
+
+
+        // 메소드: 검색
+        public void Search(string name, string filter) {
+            string sql = $"SELECT * FROM SUBJECT WHERE SUBJECT_NAME LIKE '%{name}%'" + filter;
+            OpenConnection();
+            reader = ExecuteQuery(sql);
+            RunAfterExecute();
+            CloseConnection();
         }
     }
 }
