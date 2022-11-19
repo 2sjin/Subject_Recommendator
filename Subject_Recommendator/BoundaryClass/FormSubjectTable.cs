@@ -14,6 +14,11 @@ namespace Subject_Recommendator {
             InitializeComponent();
         }
 
+        // 교과목 테이블 프로퍼티
+        public ListView Table {
+            get { return lvSubject; }
+        }
+
         private void btnDetail_Click(object sender, EventArgs e) {
             FormDetail frmDetail = new FormDetail();
             frmDetail.ShowDialog();

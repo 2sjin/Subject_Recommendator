@@ -8,10 +8,12 @@ using System.Windows.Forms;
 
 namespace Subject_Recommendator {
     public partial class FormSearch : Subject_Recommendator.FormSubjectTable {
+        ControlClass.ControlSearch ctrl = new ControlClass.ControlSearch();     // 제어 객체
         bool isShowPlaceHolder = true;  // PlaceHolder이 보이고 있는가를 나타내는 필드
 
         public FormSearch() {
             InitializeComponent();
+            UpdateTable();
         }
 
         // PlaceHolder 구현: 검색창에 포커싱 되었을 때
@@ -30,6 +32,21 @@ namespace Subject_Recommendator {
                 txtSearch.ForeColor = SystemColors.GrayText;
                 isShowPlaceHolder = true;
             }
+        }
+
+        // 교과목 테이블 갱신
+        public void UpdateTable() {
+            foreach (DataRow dr in ctrl.TableRows) {
+                ListViewItem item = new ListViewItem();
+                item.Text = dr[1].ToString();
+                for (int i = 2; i <= Table.Columns.Count; i++)
+                    item.SubItems.Add(dr[i].ToString());
+                Table.Items.Add(item);
+            }
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e) {
+
         }
     }
 }

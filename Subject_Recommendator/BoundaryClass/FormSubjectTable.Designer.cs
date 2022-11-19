@@ -23,70 +23,18 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.SubjectName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Year = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Term = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LectureType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TeamProject = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnDetail = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lvSubject = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.SubjectName,
-            this.Year,
-            this.Term,
-            this.LectureType,
-            this.TeamProject});
-            this.dataGridView1.Location = new System.Drawing.Point(16, 52);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 27;
-            this.dataGridView1.Size = new System.Drawing.Size(641, 294);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // SubjectName
-            // 
-            this.SubjectName.HeaderText = "교과목명";
-            this.SubjectName.MinimumWidth = 6;
-            this.SubjectName.Name = "SubjectName";
-            this.SubjectName.Width = 125;
-            // 
-            // Year
-            // 
-            this.Year.HeaderText = "학년";
-            this.Year.MinimumWidth = 6;
-            this.Year.Name = "Year";
-            this.Year.Width = 125;
-            // 
-            // Term
-            // 
-            this.Term.HeaderText = "개설학기";
-            this.Term.MinimumWidth = 6;
-            this.Term.Name = "Term";
-            this.Term.Width = 125;
-            // 
-            // LectureType
-            // 
-            this.LectureType.HeaderText = "강의유형";
-            this.LectureType.MinimumWidth = 6;
-            this.LectureType.Name = "LectureType";
-            this.LectureType.Width = 125;
-            // 
-            // TeamProject
-            // 
-            this.TeamProject.HeaderText = "팀 과제";
-            this.TeamProject.MinimumWidth = 6;
-            this.TeamProject.Name = "TeamProject";
-            this.TeamProject.Width = 125;
             // 
             // btnDetail
             // 
@@ -112,8 +60,8 @@
             // 
             this.panel1.AllowDrop = true;
             this.panel1.AutoSize = true;
+            this.panel1.Controls.Add(this.lvSubject);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.btnClose);
             this.panel1.Controls.Add(this.btnDetail);
             this.panel1.ImeMode = System.Windows.Forms.ImeMode.On;
@@ -121,6 +69,48 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(673, 406);
             this.panel1.TabIndex = 3;
+            // 
+            // lvSubject
+            // 
+            this.lvSubject.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5});
+            this.lvSubject.FullRowSelect = true;
+            this.lvSubject.HideSelection = false;
+            this.lvSubject.Location = new System.Drawing.Point(16, 52);
+            this.lvSubject.Name = "lvSubject";
+            this.lvSubject.Size = new System.Drawing.Size(641, 213);
+            this.lvSubject.TabIndex = 4;
+            this.lvSubject.UseCompatibleStateImageBehavior = false;
+            this.lvSubject.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "교과목명";
+            this.columnHeader1.Width = 119;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "학년";
+            this.columnHeader2.Width = 59;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "개설학기";
+            this.columnHeader3.Width = 80;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "강의유형";
+            this.columnHeader4.Width = 88;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "팀 과제";
+            this.columnHeader5.Width = 74;
             // 
             // label1
             // 
@@ -139,7 +129,6 @@
             this.Controls.Add(this.panel1);
             this.Name = "FormSubjectTable";
             this.Text = "FormSubjectTable(상속용 Form)";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -148,16 +137,15 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SubjectName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Year;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Term;
-        private System.Windows.Forms.DataGridViewTextBoxColumn LectureType;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TeamProject;
         private System.Windows.Forms.Button btnDetail;
         private System.Windows.Forms.Button btnClose;
         protected System.Windows.Forms.Panel panel1;
         protected System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ListView lvSubject;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
     }
 }

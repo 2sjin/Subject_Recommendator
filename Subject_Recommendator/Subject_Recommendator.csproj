@@ -88,6 +88,11 @@
     <Compile Include="BoundaryClass\FormTest.Designer.cs">
       <DependentUpon>FormTest.cs</DependentUpon>
     </Compile>
+    <Compile Include="ControlClass\ControlDetail.cs" />
+    <Compile Include="ControlClass\ControlFavorite.cs" />
+    <Compile Include="ControlClass\ControlResult.cs" />
+    <Compile Include="ControlClass\ControlSearch.cs" />
+    <Compile Include="ControlClass\ControlTest.cs" />
     <Compile Include="EntityClass\Question.cs" />
     <Compile Include="EntityClass\Subject.cs" />
     <Compile Include="Program.cs" />
@@ -135,8 +140,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ControlClass\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
