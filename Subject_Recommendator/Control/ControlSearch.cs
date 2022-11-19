@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-using System.Data;
 using System.Data.OleDb;
 
 namespace Subject_Recommendator {
@@ -18,7 +16,6 @@ namespace Subject_Recommendator {
         // 생성자
         public ControlSearch() {
             SubjectList = new List<Subject>();
-
             OpenConnection();
             reader = ExecuteQuery("SELECT * FROM SUBJECT");
             RunAfterExecute();
@@ -34,12 +31,12 @@ namespace Subject_Recommendator {
             CloseConnection();
         }
 
-        // 추상 메소드 재정의
+        // 추상 메소드 재정의: SQL문 실행 후처리
         public override void RunAfterExecute() {
             SubjectList.Clear();
             while (reader.Read()) {
                 Subject subject = new Subject();
-                int dummy = reader.GetInt32(0);
+                subject.Id = reader.GetInt32(0);
                 subject.Name = reader.GetString(1);
                 subject.Year = reader.GetInt32(2);
                 subject.Term = reader.GetInt32(3);

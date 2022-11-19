@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using System.Data.OleDb;
 
 namespace Subject_Recommendator {
@@ -30,7 +29,7 @@ namespace Subject_Recommendator {
             return comm.ExecuteNonQuery();
         }
 
-        // SQL문 실행 후처리(추상 메소드)
+        // 추상 메소드 선언: SQL문 실행 후처리
         abstract public void RunAfterExecute();
 
         // Connection 닫기

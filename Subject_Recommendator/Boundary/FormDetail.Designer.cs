@@ -29,7 +29,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtOutline = new System.Windows.Forms.TextBox();
             this.labelSubjectName = new System.Windows.Forms.Label();
             this.labelYear = new System.Windows.Forms.Label();
             this.labelTerm = new System.Windows.Forms.Label();
@@ -91,13 +91,13 @@
             this.label6.TabIndex = 5;
             this.label6.Text = "교과목 개요";
             // 
-            // textBox1
+            // txtOutline
             // 
-            this.textBox1.Location = new System.Drawing.Point(60, 245);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(497, 152);
-            this.textBox1.TabIndex = 6;
+            this.txtOutline.Location = new System.Drawing.Point(60, 245);
+            this.txtOutline.Multiline = true;
+            this.txtOutline.Name = "txtOutline";
+            this.txtOutline.Size = new System.Drawing.Size(497, 152);
+            this.txtOutline.TabIndex = 6;
             // 
             // labelSubjectName
             // 
@@ -154,7 +154,7 @@
             this.Controls.Add(this.labelTerm);
             this.Controls.Add(this.labelYear);
             this.Controls.Add(this.labelSubjectName);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtOutline);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
@@ -176,7 +176,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtOutline;
         private System.Windows.Forms.Label labelSubjectName;
         private System.Windows.Forms.Label labelYear;
         private System.Windows.Forms.Label labelTerm;

@@ -20,7 +20,7 @@ namespace Subject_Recommendator {
         }
 
         private void btnDetail_Click(object sender, EventArgs e) {
-            FormDetail frmDetail = new FormDetail();
+            FormDetail frmDetail = new FormDetail(int.Parse(lvSubject.SelectedItems[0].Text));
             frmDetail.ShowDialog();
         }
 

@@ -26,13 +26,14 @@
             this.btnDetail = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lvSubject = new System.Windows.Forms.ListView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label1 = new System.Windows.Forms.Label();
+            this.lvSubject = new System.Windows.Forms.ListView();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,27 +71,24 @@
             this.panel1.Size = new System.Drawing.Size(673, 406);
             this.panel1.TabIndex = 3;
             // 
-            // lvSubject
+            // label1
             // 
-            this.lvSubject.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5});
-            this.lvSubject.FullRowSelect = true;
-            this.lvSubject.HideSelection = false;
-            this.lvSubject.Location = new System.Drawing.Point(16, 52);
-            this.lvSubject.Name = "lvSubject";
-            this.lvSubject.Size = new System.Drawing.Size(641, 213);
-            this.lvSubject.TabIndex = 4;
-            this.lvSubject.UseCompatibleStateImageBehavior = false;
-            this.lvSubject.View = System.Windows.Forms.View.Details;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(13, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(184, 15);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "테이블 캡션(상속용 Label)";
+            // 
+            // ID
+            // 
+            this.ID.Text = "교과목번호";
+            this.ID.Width = 80;
             // 
             // columnHeader1
             // 
             this.columnHeader1.Text = "교과목명";
-            this.columnHeader1.Width = 180;
+            this.columnHeader1.Width = 160;
             // 
             // columnHeader2
             // 
@@ -108,22 +106,32 @@
             // 
             this.columnHeader4.Text = "강의유형";
             this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader4.Width = 120;
+            this.columnHeader4.Width = 80;
             // 
             // columnHeader5
             // 
             this.columnHeader5.Text = "팀 과제";
             this.columnHeader5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader5.Width = 100;
+            this.columnHeader5.Width = 80;
             // 
-            // label1
+            // lvSubject
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(184, 15);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "테이블 캡션(상속용 Label)";
+            this.lvSubject.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.ID,
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5});
+            this.lvSubject.FullRowSelect = true;
+            this.lvSubject.HideSelection = false;
+            this.lvSubject.Location = new System.Drawing.Point(16, 54);
+            this.lvSubject.MultiSelect = false;
+            this.lvSubject.Name = "lvSubject";
+            this.lvSubject.Size = new System.Drawing.Size(641, 213);
+            this.lvSubject.TabIndex = 4;
+            this.lvSubject.UseCompatibleStateImageBehavior = false;
+            this.lvSubject.View = System.Windows.Forms.View.Details;
             // 
             // FormSubjectTable
             // 
@@ -146,6 +154,7 @@
         protected System.Windows.Forms.Panel panel1;
         protected System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListView lvSubject;
+        private System.Windows.Forms.ColumnHeader ID;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
