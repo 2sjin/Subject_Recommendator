@@ -7,7 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 
 namespace Subject_Recommendator {
-    public partial class FormSearch : Subject_Recommendator.FormSubjectTable {
+    public partial class FormSearch : Subject_Recommendator.FormSubjectListView {
         // 필드
         ControlSearch ctrl = new ControlSearch();     // 제어 객체
         bool isShowPlaceHolder = true;  // PlaceHolder이 보이고 있는가를 나타내는 필드
@@ -15,7 +15,7 @@ namespace Subject_Recommendator {
         // 생성자
         public FormSearch() {
             InitializeComponent();
-            UpdateTable();
+            RefreshListView();
         }
 
         // 프로퍼티: 즐겨찾기에 추가 버튼
@@ -42,9 +42,9 @@ namespace Subject_Recommendator {
             }
         }
 
-        // 교과목 테이블 갱신
-        public void UpdateTable() {
-            Table.Items.Clear();
+        // 교과목 리스트뷰 갱신
+        public void RefreshListView() {
+            SubjectListView.Items.Clear();
             foreach (Subject s in ctrl.SubjectList) {
                 ListViewItem item = new ListViewItem();
                 item.Text = s.Id.ToString();
@@ -53,7 +53,7 @@ namespace Subject_Recommendator {
                 item.SubItems.Add(s.Term.ToString());
                 item.SubItems.Add(s.LectureType);
                 item.SubItems.Add(s.TeamProject);
-                Table.Items.Add(item);
+                SubjectListView.Items.Add(item);
             }
         }
 
@@ -95,14 +95,14 @@ namespace Subject_Recommendator {
                 ctrl.Search("", GetFilterSQL());
             else
                 ctrl.Search(txtSearch.Text, GetFilterSQL());
-            UpdateTable();
+            RefreshListView();
         }
 
         // 즐겨찾기에 추가 버튼 클릭 시 이벤트
         private void btnAddFavorite_Click(object sender, EventArgs e) {
             ControlFavorite ctrlFavorite = new ControlFavorite();
             ctrlFavorite.AddFavorite(int.Parse(lvSubject.SelectedItems[0].Text));
-            MessageBox.Show("교과목을 즐겨찾기에 추가하였습니다.", "교과목 즐겨찾기");
+            MessageBox.Show("교과목을 즐겨찾기에 추가하였습니다.", "교과목 즐겨찾기 추가");
             this.Close();
         }
     }

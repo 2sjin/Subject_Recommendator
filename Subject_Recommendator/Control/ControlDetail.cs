@@ -9,21 +9,28 @@ namespace Subject_Recommendator {
     internal class ControlDetail : ControlDB {
         // 필드
         OleDbDataReader reader;
+        int subjectId;
 
         // 교과목 프로퍼티
         public Subject SelectedSubject { get; set; }
 
         // 생성자
         public ControlDetail(int subjectId) {
+            this.subjectId = subjectId;
+            Refresh();
+        }
+
+        // 추상 메소드 재정의: 데이터 새로고침 실행
+        override public void Refresh() {
             SelectedSubject = new Subject();
             OpenConnection();
             reader = ExecuteQuery($"SELECT * FROM SUBJECT WHERE ID={subjectId}");
-            RunAfterExecuteQuery();
+            RunPostRefresh();
             CloseConnection();
         }
 
         // 추상 메소드 재정의: SQL문 실행 후처리
-        public override void RunAfterExecuteQuery() {
+        public override void RunPostRefresh() {
             while (reader.Read()) {
                 SelectedSubject.Id = reader.GetInt32(0);
                 SelectedSubject.Name = reader.GetString(1);

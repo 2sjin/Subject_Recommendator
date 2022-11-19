@@ -1,5 +1,5 @@
 ﻿namespace Subject_Recommendator {
-    partial class FormSubjectTable {
+    partial class FormSubjectListView {
         /// <summary>
         /// Required designer variable.
         /// </summary>

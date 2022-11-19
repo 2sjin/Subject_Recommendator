@@ -29,8 +29,11 @@ namespace Subject_Recommendator {
             return comm.ExecuteNonQuery();
         }
 
-        // 추상 메소드 선언: SQL문 실행 후처리
-        abstract public void RunAfterExecuteQuery();
+        // 추상 메소드 선언: 데이터 새로고침 실행
+        abstract public void Refresh();
+
+        // 추상 메소드 선언: 데이터 새로고침 실행 후처리
+        abstract public void RunPostRefresh();
 
         // Connection 닫기
         public void CloseConnection() {

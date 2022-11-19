@@ -16,14 +16,19 @@ namespace Subject_Recommendator {
         // 생성자
         public ControlSearch() {
             SubjectList = new List<Subject>();
+            Refresh();
+        }
+
+        // 추상 메소드 재정의: 데이터 새로고침 실행
+        public override void Refresh() {
             OpenConnection();
             reader = ExecuteQuery("SELECT * FROM SUBJECT");
-            RunAfterExecuteQuery();
+            RunPostRefresh();
             CloseConnection();
         }
 
-        // 추상 메소드 재정의: SQL문 실행 후처리
-        public override void RunAfterExecuteQuery() {
+        // 추상 메소드 재정의: 데이터 새로고침 실행 후처리
+        public override void RunPostRefresh() {
             SubjectList.Clear();
             while (reader.Read()) {
                 Subject subject = new Subject();
@@ -44,7 +49,7 @@ namespace Subject_Recommendator {
             string sql = $"SELECT * FROM SUBJECT WHERE SUBJECT_NAME LIKE '%{name}%'" + filter;
             OpenConnection();
             reader = ExecuteQuery(sql);
-            RunAfterExecuteQuery();
+            RunPostRefresh();
             CloseConnection();
         }
     }

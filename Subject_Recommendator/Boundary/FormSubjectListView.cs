@@ -9,13 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Subject_Recommendator {
-    public partial class FormSubjectTable : Form {
-        public FormSubjectTable() {
+    public partial class FormSubjectListView : Form {
+        public FormSubjectListView() {
             InitializeComponent();
         }
 
         // 교과목 테이블 프로퍼티
-        public ListView Table {
+        public ListView SubjectListView {
             get { return lvSubject; }
         }
 

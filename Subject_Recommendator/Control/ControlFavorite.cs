@@ -15,18 +15,24 @@ namespace Subject_Recommendator {
 
         // 생성자
         public ControlFavorite() {
+            FavoriteList = new List<Subject>();
+            Refresh();
+        }
+
+        // 추상 메소드 재정의: 데이터 새로고침 실행
+        public override void Refresh() {
             string sql = "SELECT SUBJECT_ID, SUBJECT_NAME, LIMIT_YEAR, TERM, LECTURE_TYPE, TEAM_PROJECT " +
                         "FROM FAVORITE, SUBJECT " +
                         "WHERE FAVORITE.SUBJECT_ID=SUBJECT.ID";
             FavoriteList = new List<Subject>();
             OpenConnection();
             reader = ExecuteQuery(sql);
-            RunAfterExecuteQuery();
+            RunPostRefresh();
             CloseConnection();
         }
 
-        // 추상 메소드 재정의: SQL문 실행 후처리
-        public override void RunAfterExecuteQuery() {
+        // 추상 메소드 재정의: 데이터 새로고침 실행 후처리
+        public override void RunPostRefresh() {
             FavoriteList.Clear();
             while (reader.Read()) {
                 Subject subject = new Subject();
@@ -45,6 +51,13 @@ namespace Subject_Recommendator {
         public void AddFavorite(int subjectId) {
             OpenConnection();
             ExecuteUpdate($"INSERT INTO FAVORITE(SUBJECT_ID) VALUES({subjectId})");
+            CloseConnection();
+        }
+
+        // 즐겨찾기 삭제
+        public void DeleteFavorite(int subjectId) {
+            OpenConnection();
+            ExecuteUpdate($"DELETE FROM FAVORITE WHERE SUBJECT_ID={subjectId}");
             CloseConnection();
         }
     }
