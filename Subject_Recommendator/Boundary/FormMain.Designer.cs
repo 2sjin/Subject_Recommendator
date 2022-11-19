@@ -29,9 +29,6 @@
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.rbTerm2 = new System.Windows.Forms.RadioButton();
-            this.rbTerm1 = new System.Windows.Forms.RadioButton();
-            this.rbTermAll = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -40,6 +37,8 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.교과목검색ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.즐겨찾기ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cbTerm1 = new System.Windows.Forms.CheckBox();
+            this.cbTerm2 = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -47,14 +46,13 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cbTerm2);
+            this.groupBox1.Controls.Add(this.cbTerm1);
             this.groupBox1.Controls.Add(this.numericUpDown1);
             this.groupBox1.Controls.Add(this.checkBox3);
             this.groupBox1.Controls.Add(this.checkBox2);
             this.groupBox1.Controls.Add(this.checkBox1);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.rbTerm2);
-            this.groupBox1.Controls.Add(this.rbTerm1);
-            this.groupBox1.Controls.Add(this.rbTermAll);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
@@ -126,39 +124,6 @@
             this.label4.Size = new System.Drawing.Size(222, 15);
             this.label4.TabIndex = 7;
             this.label4.Text = "학년 이하의 과목만 추천합니다.";
-            // 
-            // rbTerm2
-            // 
-            this.rbTerm2.AutoSize = true;
-            this.rbTerm2.Location = new System.Drawing.Point(389, 100);
-            this.rbTerm2.Name = "rbTerm2";
-            this.rbTerm2.Size = new System.Drawing.Size(66, 19);
-            this.rbTerm2.TabIndex = 4;
-            this.rbTerm2.TabStop = true;
-            this.rbTerm2.Text = "2학기";
-            this.rbTerm2.UseVisualStyleBackColor = true;
-            // 
-            // rbTerm1
-            // 
-            this.rbTerm1.AutoSize = true;
-            this.rbTerm1.Location = new System.Drawing.Point(268, 100);
-            this.rbTerm1.Name = "rbTerm1";
-            this.rbTerm1.Size = new System.Drawing.Size(66, 19);
-            this.rbTerm1.TabIndex = 3;
-            this.rbTerm1.TabStop = true;
-            this.rbTerm1.Text = "1학기";
-            this.rbTerm1.UseVisualStyleBackColor = true;
-            // 
-            // rbTermAll
-            // 
-            this.rbTermAll.AutoSize = true;
-            this.rbTermAll.Location = new System.Drawing.Point(150, 100);
-            this.rbTermAll.Name = "rbTermAll";
-            this.rbTermAll.Size = new System.Drawing.Size(58, 19);
-            this.rbTermAll.TabIndex = 2;
-            this.rbTermAll.TabStop = true;
-            this.rbTermAll.Text = "전체";
-            this.rbTermAll.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -233,6 +198,26 @@
             this.즐겨찾기ToolStripMenuItem.Text = "즐겨찾기";
             this.즐겨찾기ToolStripMenuItem.Click += new System.EventHandler(this.즐겨찾기ToolStripMenuItem_Click);
             // 
+            // cbTerm1
+            // 
+            this.cbTerm1.AutoSize = true;
+            this.cbTerm1.Location = new System.Drawing.Point(150, 100);
+            this.cbTerm1.Name = "cbTerm1";
+            this.cbTerm1.Size = new System.Drawing.Size(67, 19);
+            this.cbTerm1.TabIndex = 11;
+            this.cbTerm1.Text = "1학기";
+            this.cbTerm1.UseVisualStyleBackColor = true;
+            // 
+            // cbTerm2
+            // 
+            this.cbTerm2.AutoSize = true;
+            this.cbTerm2.Location = new System.Drawing.Point(268, 100);
+            this.cbTerm2.Name = "cbTerm2";
+            this.cbTerm2.Size = new System.Drawing.Size(67, 19);
+            this.cbTerm2.TabIndex = 11;
+            this.cbTerm2.Text = "2학기";
+            this.cbTerm2.UseVisualStyleBackColor = true;
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -259,9 +244,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton rbTerm2;
-        private System.Windows.Forms.RadioButton rbTerm1;
-        private System.Windows.Forms.RadioButton rbTermAll;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -275,6 +257,8 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem 교과목검색ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 즐겨찾기ToolStripMenuItem;
+        private System.Windows.Forms.CheckBox cbTerm2;
+        private System.Windows.Forms.CheckBox cbTerm1;
     }
 }
 

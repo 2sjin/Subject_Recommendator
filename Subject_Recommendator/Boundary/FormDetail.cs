@@ -27,5 +27,9 @@ namespace Subject_Recommendator {
             labelTeamProject.Text = ctrl.SelectedSubject.TeamProject;
             txtOutline.Text = ctrl.SelectedSubject.Outline;
         }
+
+        private void btnClose_Click(object sender, EventArgs e) {
+            this.Close();
+        }
     }
 }

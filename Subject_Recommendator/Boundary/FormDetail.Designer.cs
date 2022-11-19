@@ -35,6 +35,7 @@
             this.labelTerm = new System.Windows.Forms.Label();
             this.labelLectureType = new System.Windows.Forms.Label();
             this.labelTeamProject = new System.Windows.Forms.Label();
+            this.btnClose = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -145,11 +146,22 @@
             this.labelTeamProject.TabIndex = 10;
             this.labelTeamProject.Text = "labelTeamProject";
             // 
+            // btnClose
+            // 
+            this.btnClose.Location = new System.Drawing.Point(482, 424);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(75, 28);
+            this.btnClose.TabIndex = 11;
+            this.btnClose.Text = "닫기";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // FormDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(611, 450);
+            this.ClientSize = new System.Drawing.Size(611, 490);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.labelTeamProject);
             this.Controls.Add(this.labelLectureType);
             this.Controls.Add(this.labelTerm);
@@ -183,5 +195,6 @@
         private System.Windows.Forms.Label labelTerm;
         private System.Windows.Forms.Label labelLectureType;
         private System.Windows.Forms.Label labelTeamProject;
+        private System.Windows.Forms.Button btnClose;
     }
 }
