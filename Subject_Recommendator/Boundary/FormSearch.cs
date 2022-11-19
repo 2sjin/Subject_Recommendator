@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace Subject_Recommendator {
     public partial class FormSearch : Subject_Recommendator.FormSubjectTable {
-        ControlClass.ControlSearch ctrl = new ControlClass.ControlSearch();     // 제어 객체
+        ControlSearch ctrl = new ControlSearch();     // 제어 객체
         bool isShowPlaceHolder = true;  // PlaceHolder이 보이고 있는가를 나타내는 필드
 
         public FormSearch() {
@@ -36,11 +36,13 @@ namespace Subject_Recommendator {
 
         // 교과목 테이블 갱신
         public void UpdateTable() {
-            foreach (DataRow dr in ctrl.TableRows) {
+            foreach (Subject s in ctrl.SubjectList) {
                 ListViewItem item = new ListViewItem();
-                item.Text = dr[1].ToString();
-                for (int i = 2; i <= Table.Columns.Count; i++)
-                    item.SubItems.Add(dr[i].ToString());
+                item.Text = s.Name;
+                item.SubItems.Add(s.Year.ToString());
+                item.SubItems.Add(s.Term.ToString());
+                item.SubItems.Add(s.LectureType);
+                item.SubItems.Add(s.TeamProject);
                 Table.Items.Add(item);
             }
         }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Subject_Recommendator.ControlClass {
-    internal class ControlTest {
+namespace Subject_Recommendator {
+    internal class ControlFavorite {
     }
 }
