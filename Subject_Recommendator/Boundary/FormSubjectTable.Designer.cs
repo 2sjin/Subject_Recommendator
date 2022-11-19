@@ -154,7 +154,7 @@
         private System.Windows.Forms.Button btnClose;
         protected System.Windows.Forms.Panel panel1;
         protected System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListView lvSubject;
+        protected System.Windows.Forms.ListView lvSubject;
         private System.Windows.Forms.ColumnHeader ID;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;

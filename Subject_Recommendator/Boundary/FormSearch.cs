@@ -91,5 +91,11 @@ namespace Subject_Recommendator {
                 ctrl.Search(txtSearch.Text, GetFilterSQL());
             UpdateTable();
         }
+
+        private void button1_Click(object sender, EventArgs e) {
+            ControlFavorite ctrlFavorite = new ControlFavorite();
+            ctrlFavorite.AddFavorite(int.Parse(lvSubject.SelectedItems[0].Text));
+            MessageBox.Show("교과목을 즐겨찾기에 추가하였습니다.", "교과목 즐겨찾기");
+        }
     }
 }

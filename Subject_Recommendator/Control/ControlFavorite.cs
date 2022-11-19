@@ -21,12 +21,12 @@ namespace Subject_Recommendator {
             FavoriteList = new List<Subject>();
             OpenConnection();
             reader = ExecuteQuery(sql);
-            RunAfterExecute();
+            RunAfterExecuteQuery();
             CloseConnection();
         }
 
         // 추상 메소드 재정의: SQL문 실행 후처리
-        public override void RunAfterExecute() {
+        public override void RunAfterExecuteQuery() {
             FavoriteList.Clear();
             while (reader.Read()) {
                 Subject subject = new Subject();
@@ -39,6 +39,13 @@ namespace Subject_Recommendator {
                 FavoriteList.Add(subject);
             }
             reader.Close();
+        }
+
+        // 즐겨찾기 추가
+        public void AddFavorite(int subjectId) {
+            OpenConnection();
+            ExecuteUpdate($"INSERT INTO FAVORITE(SUBJECT_ID) VALUES({subjectId})");
+            CloseConnection();
         }
     }
 }

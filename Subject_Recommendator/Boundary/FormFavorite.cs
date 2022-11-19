@@ -30,5 +30,10 @@ namespace Subject_Recommendator {
                 Table.Items.Add(item);
             }
         }
+
+        private void button1_Click(object sender, EventArgs e) {
+            FormSearch frmSearch = new FormSearch();
+            frmSearch.ShowDialog();
+        }
     }
 }

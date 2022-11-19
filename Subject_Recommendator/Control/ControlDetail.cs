@@ -18,12 +18,12 @@ namespace Subject_Recommendator {
             SelectedSubject = new Subject();
             OpenConnection();
             reader = ExecuteQuery($"SELECT * FROM SUBJECT WHERE ID={subjectId}");
-            RunAfterExecute();
+            RunAfterExecuteQuery();
             CloseConnection();
         }
 
         // 추상 메소드 재정의: SQL문 실행 후처리
-        public override void RunAfterExecute() {
+        public override void RunAfterExecuteQuery() {
             while (reader.Read()) {
                 SelectedSubject.Id = reader.GetInt32(0);
                 SelectedSubject.Name = reader.GetString(1);

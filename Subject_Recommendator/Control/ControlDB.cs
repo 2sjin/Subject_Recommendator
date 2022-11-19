@@ -30,7 +30,7 @@ namespace Subject_Recommendator {
         }
 
         // 추상 메소드 선언: SQL문 실행 후처리
-        abstract public void RunAfterExecute();
+        abstract public void RunAfterExecuteQuery();
 
         // Connection 닫기
         public void CloseConnection() {

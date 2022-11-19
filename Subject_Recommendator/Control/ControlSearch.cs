@@ -18,12 +18,12 @@ namespace Subject_Recommendator {
             SubjectList = new List<Subject>();
             OpenConnection();
             reader = ExecuteQuery("SELECT * FROM SUBJECT");
-            RunAfterExecute();
+            RunAfterExecuteQuery();
             CloseConnection();
         }
 
         // 추상 메소드 재정의: SQL문 실행 후처리
-        public override void RunAfterExecute() {
+        public override void RunAfterExecuteQuery() {
             SubjectList.Clear();
             while (reader.Read()) {
                 Subject subject = new Subject();
@@ -44,7 +44,7 @@ namespace Subject_Recommendator {
             string sql = $"SELECT * FROM SUBJECT WHERE SUBJECT_NAME LIKE '%{name}%'" + filter;
             OpenConnection();
             reader = ExecuteQuery(sql);
-            RunAfterExecute();
+            RunAfterExecuteQuery();
             CloseConnection();
         }
     }
