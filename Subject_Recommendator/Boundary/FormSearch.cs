@@ -18,6 +18,12 @@ namespace Subject_Recommendator {
             UpdateTable();
         }
 
+        // 프로퍼티: 즐겨찾기에 추가 버튼
+        public Button BtnAddFavorite {
+            get { return btnAddFavorite; }
+        }
+
+
         // PlaceHolder 구현: 검색창에 포커싱 되었을 때
         private void txtSearch_Enter(object sender, EventArgs e) {
             if (isShowPlaceHolder) {
@@ -92,10 +98,12 @@ namespace Subject_Recommendator {
             UpdateTable();
         }
 
-        private void button1_Click(object sender, EventArgs e) {
+        // 즐겨찾기에 추가 버튼 클릭 시 이벤트
+        private void btnAddFavorite_Click(object sender, EventArgs e) {
             ControlFavorite ctrlFavorite = new ControlFavorite();
             ctrlFavorite.AddFavorite(int.Parse(lvSubject.SelectedItems[0].Text));
             MessageBox.Show("교과목을 즐겨찾기에 추가하였습니다.", "교과목 즐겨찾기");
+            this.Close();
         }
     }
 }

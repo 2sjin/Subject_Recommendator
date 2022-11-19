@@ -30,6 +30,7 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.SetChildIndex(this.lvSubject, 0);
             this.panel1.Controls.SetChildIndex(this.label1, 0);
             this.panel1.Controls.SetChildIndex(this.button1, 0);
             // 
@@ -42,7 +43,7 @@
             // 
             this.button1.Location = new System.Drawing.Point(267, 366);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(149, 28);
+            this.button1.Size = new System.Drawing.Size(149, 32);
             this.button1.TabIndex = 5;
             this.button1.Text = "텍스트 파일로 저장";
             this.button1.UseVisualStyleBackColor = true;

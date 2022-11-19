@@ -150,7 +150,7 @@
             // 
             this.btnClose.Location = new System.Drawing.Point(482, 424);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(75, 28);
+            this.btnClose.Size = new System.Drawing.Size(75, 32);
             this.btnClose.TabIndex = 11;
             this.btnClose.Text = "닫기";
             this.btnClose.UseVisualStyleBackColor = true;

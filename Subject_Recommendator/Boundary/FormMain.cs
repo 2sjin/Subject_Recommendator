@@ -25,6 +25,7 @@ namespace Subject_Recommendator {
 
         private void 교과목검색ToolStripMenuItem_Click(object sender, EventArgs e) {
             FormSearch frmSearch = new FormSearch();
+            frmSearch.BtnAddFavorite.Visible = false;
             frmSearch.ShowDialog();
         }
 

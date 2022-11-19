@@ -41,7 +41,7 @@
             // 
             this.btnDetail.Location = new System.Drawing.Point(436, 366);
             this.btnDetail.Name = "btnDetail";
-            this.btnDetail.Size = new System.Drawing.Size(127, 28);
+            this.btnDetail.Size = new System.Drawing.Size(127, 32);
             this.btnDetail.TabIndex = 1;
             this.btnDetail.Text = "상세 정보 보기";
             this.btnDetail.UseVisualStyleBackColor = true;
@@ -51,7 +51,7 @@
             // 
             this.btnClose.Location = new System.Drawing.Point(582, 366);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(75, 28);
+            this.btnClose.Size = new System.Drawing.Size(75, 32);
             this.btnClose.TabIndex = 2;
             this.btnClose.Text = "닫기";
             this.btnClose.UseVisualStyleBackColor = true;

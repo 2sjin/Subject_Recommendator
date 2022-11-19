@@ -23,7 +23,7 @@
         /// 이 메서드의 내용을 코드 편집기로 수정하지 마세요.
         /// </summary>
         private void InitializeComponent() {
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAddFavorite = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
@@ -52,25 +52,26 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnAddFavorite);
             this.panel1.Location = new System.Drawing.Point(29, 323);
+            this.panel1.Controls.SetChildIndex(this.lvSubject, 0);
             this.panel1.Controls.SetChildIndex(this.label1, 0);
-            this.panel1.Controls.SetChildIndex(this.button1, 0);
+            this.panel1.Controls.SetChildIndex(this.btnAddFavorite, 0);
             // 
             // label1
             // 
             this.label1.Size = new System.Drawing.Size(152, 15);
             this.label1.Text = "전공선택 교과목 목록";
             // 
-            // button1
+            // btnAddFavorite
             // 
-            this.button1.Location = new System.Drawing.Point(271, 366);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(149, 28);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "즐겨찾기에 추가";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnAddFavorite.Location = new System.Drawing.Point(284, 366);
+            this.btnAddFavorite.Name = "btnAddFavorite";
+            this.btnAddFavorite.Size = new System.Drawing.Size(136, 32);
+            this.btnAddFavorite.TabIndex = 4;
+            this.btnAddFavorite.Text = "즐겨찾기 추가";
+            this.btnAddFavorite.UseVisualStyleBackColor = true;
+            this.btnAddFavorite.Click += new System.EventHandler(this.btnAddFavorite_Click);
             // 
             // groupBox1
             // 
@@ -343,7 +344,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAddFavorite;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.GroupBox groupBox2;
