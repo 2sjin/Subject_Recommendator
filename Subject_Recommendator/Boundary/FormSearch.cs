@@ -73,11 +73,11 @@ namespace Subject_Recommendator {
             filterStr += cbType2.Checked ? "'이론/실습'" : "null";
 
             filterStr += ") AND TEAM_PROJECT IN(";
-            filterStr += cbYear2.Checked ? "'있음'" : "null";
+            filterStr += cbTeamYes.Checked ? "'있음'" : "null";
             filterStr += ",";
-            filterStr += cbYear3.Checked ? "'없음'" : "null";
+            filterStr += cbTeamNo.Checked ? "'없음'" : "null";
             filterStr += ",";
-            filterStr += cbYear4.Checked ? "'불확실함'" : "null";
+            filterStr += cbTeamUnknown.Checked ? "'불확실함'" : "null";
             filterStr += ")";
 
             return filterStr;
