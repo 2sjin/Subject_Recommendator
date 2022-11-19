@@ -102,7 +102,8 @@ namespace Subject_Recommendator {
         private void btnAddFavorite_Click(object sender, EventArgs e) {
             ControlFavorite ctrlFavorite = new ControlFavorite();
             ctrlFavorite.AddFavorite(int.Parse(lvSubject.SelectedItems[0].Text));
-            MessageBox.Show("교과목을 즐겨찾기에 추가하였습니다.", "교과목 즐겨찾기 추가");
+            MessageBox.Show("교과목을 즐겨찾기에 추가하였습니다.", "교과목 즐겨찾기 추가",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
         }
     }
