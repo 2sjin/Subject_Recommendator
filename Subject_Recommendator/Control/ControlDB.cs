@@ -9,7 +9,7 @@ using System.Data.OleDb;
 namespace Subject_Recommendator {
     abstract public class ControlDB {
         // 필드
-        string conStr = "Provider=Microsoft.Jet.OLEDB.4.0; Data Source=test.mdb";
+        string conStr = "Provider=Microsoft.Jet.OLEDB.4.0; Data Source=schema.mdb";
         OleDbConnection conn;
 
         // Connection 생성 및 Open

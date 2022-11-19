@@ -48,6 +48,7 @@ namespace Subject_Recommendator {
             }
         }
 
+        // 체크박스 체크 여부에 따른 필터링 문자열 리턴(SQL의 WHERE절)
         private string GetFilterSQL() {
             string filterStr = "";
 
@@ -81,7 +82,6 @@ namespace Subject_Recommendator {
 
         // 검색 버튼 클릭 시 이벤트
         private void btnSearch_Click(object sender, EventArgs e) {
-
             if (isShowPlaceHolder)
                 ctrl.Search("", GetFilterSQL());
             else

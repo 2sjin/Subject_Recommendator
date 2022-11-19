@@ -90,27 +90,31 @@
             // columnHeader1
             // 
             this.columnHeader1.Text = "교과목명";
-            this.columnHeader1.Width = 119;
+            this.columnHeader1.Width = 180;
             // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "학년";
-            this.columnHeader2.Width = 59;
+            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader2.Width = 50;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "개설학기";
-            this.columnHeader3.Width = 80;
+            this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader3.Width = 70;
             // 
             // columnHeader4
             // 
             this.columnHeader4.Text = "강의유형";
-            this.columnHeader4.Width = 88;
+            this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader4.Width = 120;
             // 
             // columnHeader5
             // 
             this.columnHeader5.Text = "팀 과제";
-            this.columnHeader5.Width = 74;
+            this.columnHeader5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader5.Width = 100;
             // 
             // label1
             // 
