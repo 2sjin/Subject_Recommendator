@@ -15,24 +15,26 @@ namespace Subject_Recommendator {
         // 생성자
         public ControlSearch() {
             SubjectList = new List<Subject>();
+
             OpenConnection();
-            CreateReader("SELECT * FROM SUBJECT");
-            RunQuery();
-            Close();
+            OleDbDataReader reader = ExecuteQuery("SELECT * FROM SUBJECT");
+            while (reader.Read()) {
+                Subject subject = new Subject();
+                int dummy = reader.GetInt32(0);
+                subject.Name = reader.GetString(1);
+                subject.Year = reader.GetInt32(2);
+                subject.Term = reader.GetInt32(3);
+                subject.LectureType = reader.GetString(4);
+                subject.TeamProject = reader.GetString(5);
+                SubjectList.Add(subject);
+            }
+            reader.Close();
+            CloseConnection();
         }
 
         // 추상 메소드 재정의
-        public override void RunQuery() {
-            while (Reader.Read()) {
-                Subject subject = new Subject();
-                int dummy = Reader.GetInt32(0);
-                subject.Name = Reader.GetString(1);
-                subject.Year = Reader.GetInt32(2);
-                subject.Term = Reader.GetInt32(3);
-                subject.LectureType = Reader.GetString(4);
-                subject.TeamProject = Reader.GetString(5);
-                SubjectList.Add(subject);
-            }
+        public override void AbstractMethod() {
+
         }
     }
 }

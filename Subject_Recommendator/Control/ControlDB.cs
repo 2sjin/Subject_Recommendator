@@ -11,12 +11,6 @@ namespace Subject_Recommendator {
         // 필드
         string conStr = "Provider=Microsoft.Jet.OLEDB.4.0; Data Source=test.mdb";
         OleDbConnection conn;
-        OleDbDataReader reader;
-
-        // 프로퍼티
-        public OleDbDataReader Reader {
-            get { return reader; }
-        }
 
         // Connection 생성 및 Open
         public void OpenConnection() {
@@ -24,19 +18,24 @@ namespace Subject_Recommendator {
             conn.Open();
         }
 
-        // OleDbDataReader 생성
-        public void CreateReader(string sql) {
+        // SQL문 실행(SELECT 연산)
+        public OleDbDataReader ExecuteQuery(string sql) {
             OleDbCommand comm = new OleDbCommand(sql, conn);
-            reader = comm.ExecuteReader();
+            return comm.ExecuteReader();
         }
 
-        // 쿼리 실행
-        abstract public void RunQuery();
+        // SQL문 실행(변경 연산)
+        public int ExecuteUpdate(string sql) {
+            OleDbCommand comm = new OleDbCommand(sql, conn);
+            return comm.ExecuteNonQuery();
+        }
+
+        // 추상 메소드
+        abstract public void AbstractMethod();
 
 
         // Reader 및 Connection 닫기
-        public void Close() {
-            reader.Close();
+        public void CloseConnection() {
             conn.Close();
         }
     }
