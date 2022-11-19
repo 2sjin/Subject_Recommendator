@@ -30,11 +30,10 @@ namespace Subject_Recommendator {
             return comm.ExecuteNonQuery();
         }
 
-        // 추상 메소드
-        abstract public void AbstractMethod();
+        // SQL문 실행 후처리(추상 메소드)
+        abstract public void RunAfterExecute();
 
-
-        // Reader 및 Connection 닫기
+        // Connection 닫기
         public void CloseConnection() {
             conn.Close();
         }

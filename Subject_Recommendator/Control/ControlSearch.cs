@@ -9,6 +9,9 @@ using System.Data.OleDb;
 
 namespace Subject_Recommendator {
     public class ControlSearch : ControlDB {
+        // 필드
+        OleDbDataReader reader;
+
         // 교과목 List 프로퍼티
         public List<Subject> SubjectList { get; set; }
 
@@ -17,7 +20,13 @@ namespace Subject_Recommendator {
             SubjectList = new List<Subject>();
 
             OpenConnection();
-            OleDbDataReader reader = ExecuteQuery("SELECT * FROM SUBJECT");
+            reader = ExecuteQuery("SELECT * FROM SUBJECT");
+            RunAfterExecute();
+            CloseConnection();
+        }
+
+        // 추상 메소드 재정의
+        public override void RunAfterExecute() {
             while (reader.Read()) {
                 Subject subject = new Subject();
                 int dummy = reader.GetInt32(0);
@@ -29,12 +38,6 @@ namespace Subject_Recommendator {
                 SubjectList.Add(subject);
             }
             reader.Close();
-            CloseConnection();
-        }
-
-        // 추상 메소드 재정의
-        public override void AbstractMethod() {
-
         }
     }
 }
