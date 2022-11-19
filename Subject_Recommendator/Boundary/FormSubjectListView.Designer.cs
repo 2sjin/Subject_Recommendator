@@ -42,7 +42,7 @@
             this.btnDetail.Location = new System.Drawing.Point(436, 366);
             this.btnDetail.Name = "btnDetail";
             this.btnDetail.Size = new System.Drawing.Size(127, 32);
-            this.btnDetail.TabIndex = 1;
+            this.btnDetail.TabIndex = 198;
             this.btnDetail.Text = "상세 정보 보기";
             this.btnDetail.UseVisualStyleBackColor = true;
             this.btnDetail.Click += new System.EventHandler(this.btnDetail_Click);
@@ -52,7 +52,7 @@
             this.btnClose.Location = new System.Drawing.Point(582, 366);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 32);
-            this.btnClose.TabIndex = 2;
+            this.btnClose.TabIndex = 199;
             this.btnClose.Text = "닫기";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -86,7 +86,7 @@
             this.lvSubject.MultiSelect = false;
             this.lvSubject.Name = "lvSubject";
             this.lvSubject.Size = new System.Drawing.Size(641, 213);
-            this.lvSubject.TabIndex = 4;
+            this.lvSubject.TabIndex = 197;
             this.lvSubject.UseCompatibleStateImageBehavior = false;
             this.lvSubject.View = System.Windows.Forms.View.Details;
             this.lvSubject.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lvSubject_MouseDoubleClick);
@@ -134,13 +134,13 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "테이블 캡션(상속용 Label)";
             // 
-            // FormSubjectTable
+            // FormSubjectListView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(733, 464);
             this.Controls.Add(this.panel1);
-            this.Name = "FormSubjectTable";
+            this.Name = "FormSubjectListView";
             this.Text = "FormSubjectTable(상속용 Form)";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

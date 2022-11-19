@@ -42,12 +42,16 @@
             this.label1.Size = new System.Drawing.Size(152, 15);
             this.label1.Text = "즐겨찾기 교과목 목록";
             // 
+            // lvSubject
+            // 
+            this.lvSubject.VirtualListSize = 1;
+            // 
             // btnAdd
             // 
             this.btnAdd.Location = new System.Drawing.Point(16, 366);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(122, 32);
-            this.btnAdd.TabIndex = 6;
+            this.btnAdd.TabIndex = 2;
             this.btnAdd.Text = "추가(...)";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -57,7 +61,7 @@
             this.btnDelete.Location = new System.Drawing.Point(155, 366);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(71, 32);
-            this.btnDelete.TabIndex = 7;
+            this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "삭제";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);

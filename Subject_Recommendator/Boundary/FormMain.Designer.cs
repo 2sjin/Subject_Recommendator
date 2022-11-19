@@ -24,6 +24,8 @@
         /// </summary>
         private void InitializeComponent() {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbTerm2 = new System.Windows.Forms.CheckBox();
+            this.cbTerm1 = new System.Windows.Forms.CheckBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
@@ -37,8 +39,6 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.교과목검색ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.즐겨찾기ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cbTerm1 = new System.Windows.Forms.CheckBox();
-            this.cbTerm2 = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -63,6 +63,26 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "교과목 추천 조건";
             // 
+            // cbTerm2
+            // 
+            this.cbTerm2.AutoSize = true;
+            this.cbTerm2.Location = new System.Drawing.Point(268, 100);
+            this.cbTerm2.Name = "cbTerm2";
+            this.cbTerm2.Size = new System.Drawing.Size(67, 19);
+            this.cbTerm2.TabIndex = 3;
+            this.cbTerm2.Text = "2학기";
+            this.cbTerm2.UseVisualStyleBackColor = true;
+            // 
+            // cbTerm1
+            // 
+            this.cbTerm1.AutoSize = true;
+            this.cbTerm1.Location = new System.Drawing.Point(150, 100);
+            this.cbTerm1.Name = "cbTerm1";
+            this.cbTerm1.Size = new System.Drawing.Size(67, 19);
+            this.cbTerm1.TabIndex = 2;
+            this.cbTerm1.Text = "1학기";
+            this.cbTerm1.UseVisualStyleBackColor = true;
+            // 
             // numericUpDown1
             // 
             this.numericUpDown1.Location = new System.Drawing.Point(150, 57);
@@ -81,7 +101,7 @@
             this.numericUpDown1.TabIndex = 1;
             this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.numericUpDown1.Value = new decimal(new int[] {
-            2,
+            4,
             0,
             0,
             0});
@@ -197,26 +217,6 @@
             this.즐겨찾기ToolStripMenuItem.Size = new System.Drawing.Size(83, 24);
             this.즐겨찾기ToolStripMenuItem.Text = "즐겨찾기";
             this.즐겨찾기ToolStripMenuItem.Click += new System.EventHandler(this.즐겨찾기ToolStripMenuItem_Click);
-            // 
-            // cbTerm1
-            // 
-            this.cbTerm1.AutoSize = true;
-            this.cbTerm1.Location = new System.Drawing.Point(150, 100);
-            this.cbTerm1.Name = "cbTerm1";
-            this.cbTerm1.Size = new System.Drawing.Size(67, 19);
-            this.cbTerm1.TabIndex = 11;
-            this.cbTerm1.Text = "1학기";
-            this.cbTerm1.UseVisualStyleBackColor = true;
-            // 
-            // cbTerm2
-            // 
-            this.cbTerm2.AutoSize = true;
-            this.cbTerm2.Location = new System.Drawing.Point(268, 100);
-            this.cbTerm2.Name = "cbTerm2";
-            this.cbTerm2.Size = new System.Drawing.Size(67, 19);
-            this.cbTerm2.TabIndex = 11;
-            this.cbTerm2.Text = "2학기";
-            this.cbTerm2.UseVisualStyleBackColor = true;
             // 
             // FormMain
             // 

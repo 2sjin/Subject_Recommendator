@@ -54,6 +54,7 @@
             // 
             this.panel1.Controls.Add(this.btnAddFavorite);
             this.panel1.Location = new System.Drawing.Point(29, 323);
+            this.panel1.TabIndex = 15;
             this.panel1.Controls.SetChildIndex(this.lvSubject, 0);
             this.panel1.Controls.SetChildIndex(this.label1, 0);
             this.panel1.Controls.SetChildIndex(this.btnAddFavorite, 0);
@@ -63,12 +64,16 @@
             this.label1.Size = new System.Drawing.Size(152, 15);
             this.label1.Text = "전공선택 교과목 목록";
             // 
+            // lvSubject
+            // 
+            this.lvSubject.TabIndex = 13;
+            // 
             // btnAddFavorite
             // 
             this.btnAddFavorite.Location = new System.Drawing.Point(284, 366);
             this.btnAddFavorite.Name = "btnAddFavorite";
             this.btnAddFavorite.Size = new System.Drawing.Size(136, 32);
-            this.btnAddFavorite.TabIndex = 4;
+            this.btnAddFavorite.TabIndex = 14;
             this.btnAddFavorite.Text = "즐겨찾기 추가";
             this.btnAddFavorite.UseVisualStyleBackColor = true;
             this.btnAddFavorite.Click += new System.EventHandler(this.btnAddFavorite_Click);
@@ -170,7 +175,7 @@
             this.cbTerm2.Location = new System.Drawing.Point(299, 34);
             this.cbTerm2.Name = "cbTerm2";
             this.cbTerm2.Size = new System.Drawing.Size(67, 19);
-            this.cbTerm2.TabIndex = 15;
+            this.cbTerm2.TabIndex = 7;
             this.cbTerm2.Text = "2학기";
             this.cbTerm2.UseVisualStyleBackColor = true;
             // 
@@ -182,7 +187,7 @@
             this.cbTerm1.Location = new System.Drawing.Point(151, 34);
             this.cbTerm1.Name = "cbTerm1";
             this.cbTerm1.Size = new System.Drawing.Size(67, 19);
-            this.cbTerm1.TabIndex = 14;
+            this.cbTerm1.TabIndex = 6;
             this.cbTerm1.Text = "1학기";
             this.cbTerm1.UseVisualStyleBackColor = true;
             // 
@@ -194,7 +199,7 @@
             this.cbTeamUnknown.Location = new System.Drawing.Point(447, 96);
             this.cbTeamUnknown.Name = "cbTeamUnknown";
             this.cbTeamUnknown.Size = new System.Drawing.Size(89, 19);
-            this.cbTeamUnknown.TabIndex = 11;
+            this.cbTeamUnknown.TabIndex = 12;
             this.cbTeamUnknown.Text = "불확실함";
             this.cbTeamUnknown.UseVisualStyleBackColor = true;
             // 
@@ -206,7 +211,7 @@
             this.cbTeamNo.Location = new System.Drawing.Point(299, 96);
             this.cbTeamNo.Name = "cbTeamNo";
             this.cbTeamNo.Size = new System.Drawing.Size(59, 19);
-            this.cbTeamNo.TabIndex = 12;
+            this.cbTeamNo.TabIndex = 11;
             this.cbTeamNo.Text = "없음";
             this.cbTeamNo.UseVisualStyleBackColor = true;
             // 
@@ -218,7 +223,7 @@
             this.cbTeamYes.Location = new System.Drawing.Point(151, 96);
             this.cbTeamYes.Name = "cbTeamYes";
             this.cbTeamYes.Size = new System.Drawing.Size(59, 19);
-            this.cbTeamYes.TabIndex = 13;
+            this.cbTeamYes.TabIndex = 10;
             this.cbTeamYes.Text = "있음";
             this.cbTeamYes.UseVisualStyleBackColor = true;
             // 
@@ -248,7 +253,7 @@
             this.cbYear2.Location = new System.Drawing.Point(151, 3);
             this.cbYear2.Name = "cbYear2";
             this.cbYear2.Size = new System.Drawing.Size(67, 19);
-            this.cbYear2.TabIndex = 0;
+            this.cbYear2.TabIndex = 3;
             this.cbYear2.Text = "2학년";
             this.cbYear2.UseVisualStyleBackColor = true;
             // 
@@ -272,7 +277,7 @@
             this.cbType1.Location = new System.Drawing.Point(151, 65);
             this.cbType1.Name = "cbType1";
             this.cbType1.Size = new System.Drawing.Size(59, 19);
-            this.cbType1.TabIndex = 10;
+            this.cbType1.TabIndex = 8;
             this.cbType1.Text = "이론";
             this.cbType1.UseVisualStyleBackColor = true;
             // 
@@ -284,7 +289,7 @@
             this.cbYear3.Location = new System.Drawing.Point(299, 3);
             this.cbYear3.Name = "cbYear3";
             this.cbYear3.Size = new System.Drawing.Size(67, 19);
-            this.cbYear3.TabIndex = 1;
+            this.cbYear3.TabIndex = 4;
             this.cbYear3.Text = "3학년";
             this.cbYear3.UseVisualStyleBackColor = true;
             // 
@@ -296,7 +301,7 @@
             this.cbYear4.Location = new System.Drawing.Point(447, 3);
             this.cbYear4.Name = "cbYear4";
             this.cbYear4.Size = new System.Drawing.Size(67, 19);
-            this.cbYear4.TabIndex = 2;
+            this.cbYear4.TabIndex = 5;
             this.cbYear4.Text = "4학년";
             this.cbYear4.UseVisualStyleBackColor = true;
             // 
