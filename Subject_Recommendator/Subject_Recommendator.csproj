@@ -46,69 +46,71 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EntityClass\FormDetail.cs">
+    <Compile Include="BoundaryClass\FormDetail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EntityClass\FormDetail.Designer.cs">
+    <Compile Include="BoundaryClass\FormDetail.Designer.cs">
       <DependentUpon>FormDetail.cs</DependentUpon>
     </Compile>
-    <Compile Include="EntityClass\FormFavorite.cs">
+    <Compile Include="BoundaryClass\FormFavorite.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EntityClass\FormFavorite.Designer.cs">
+    <Compile Include="BoundaryClass\FormFavorite.Designer.cs">
       <DependentUpon>FormFavorite.cs</DependentUpon>
     </Compile>
-    <Compile Include="EntityClass\FormMain.cs">
+    <Compile Include="BoundaryClass\FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EntityClass\FormMain.Designer.cs">
+    <Compile Include="BoundaryClass\FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="EntityClass\FormResult.cs">
+    <Compile Include="BoundaryClass\FormResult.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EntityClass\FormResult.Designer.cs">
+    <Compile Include="BoundaryClass\FormResult.Designer.cs">
       <DependentUpon>FormResult.cs</DependentUpon>
     </Compile>
-    <Compile Include="EntityClass\FormSearch.cs">
+    <Compile Include="BoundaryClass\FormSearch.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EntityClass\FormSearch.Designer.cs">
+    <Compile Include="BoundaryClass\FormSearch.Designer.cs">
       <DependentUpon>FormSearch.cs</DependentUpon>
     </Compile>
-    <Compile Include="EntityClass\FormSubjectTable.cs">
+    <Compile Include="BoundaryClass\FormSubjectTable.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EntityClass\FormSubjectTable.Designer.cs">
+    <Compile Include="BoundaryClass\FormSubjectTable.Designer.cs">
       <DependentUpon>FormSubjectTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="EntityClass\FormTest.cs">
+    <Compile Include="BoundaryClass\FormTest.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EntityClass\FormTest.Designer.cs">
+    <Compile Include="BoundaryClass\FormTest.Designer.cs">
       <DependentUpon>FormTest.cs</DependentUpon>
     </Compile>
+    <Compile Include="EntityClass\Question.cs" />
+    <Compile Include="EntityClass\Subject.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="EntityClass\FormDetail.resx">
+    <EmbeddedResource Include="BoundaryClass\FormDetail.resx">
       <DependentUpon>FormDetail.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EntityClass\FormFavorite.resx">
+    <EmbeddedResource Include="BoundaryClass\FormFavorite.resx">
       <DependentUpon>FormFavorite.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EntityClass\FormMain.resx">
+    <EmbeddedResource Include="BoundaryClass\FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EntityClass\FormResult.resx">
+    <EmbeddedResource Include="BoundaryClass\FormResult.resx">
       <DependentUpon>FormResult.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EntityClass\FormSearch.resx">
+    <EmbeddedResource Include="BoundaryClass\FormSearch.resx">
       <DependentUpon>FormSearch.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EntityClass\FormSubjectTable.resx">
+    <EmbeddedResource Include="BoundaryClass\FormSubjectTable.resx">
       <DependentUpon>FormSubjectTable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EntityClass\FormTest.resx">
+    <EmbeddedResource Include="BoundaryClass\FormTest.resx">
       <DependentUpon>FormTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -134,7 +136,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BoundaryClass\" />
     <Folder Include="ControlClass\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
