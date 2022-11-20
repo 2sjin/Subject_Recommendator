@@ -1,5 +1,4 @@
 ﻿namespace Subject_Recommendator {
-
     // 교과목 엔티티 클래스
     public class Subject {
         public int Id { get; set; }     // 교과목번호
