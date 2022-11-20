@@ -41,7 +41,7 @@ namespace Subject_Recommendator {
             }
         }
 
-        // 교과목 리스트뷰 갱신
+        // 메소드: 교과목 리스트뷰 갱신
         public void RefreshListView() {
             if (isFavoriteAddMode)                  // 즐겨찾기 추가 모드로 Form 실행중이면
                 ctrl.removeAlreadyFavorite();       // 즐겨찾기 추가 불가능한 교과목은 제거

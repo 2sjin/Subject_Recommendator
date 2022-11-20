@@ -106,7 +106,7 @@
             this.txtQuestion.ReadOnly = true;
             this.txtQuestion.Size = new System.Drawing.Size(580, 98);
             this.txtQuestion.TabIndex = 8;
-            this.txtQuestion.Text = "1. 테스트 문항입니다.";
+            this.txtQuestion.Text = "테스트 문항입니다.";
             // 
             // FormTest
             // 
