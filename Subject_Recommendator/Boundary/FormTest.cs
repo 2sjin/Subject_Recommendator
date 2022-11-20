@@ -46,15 +46,7 @@ namespace Subject_Recommendator {
                 this.Close();
         }
 
-        private void btnAnswer1_Click(object sender, EventArgs e) {
-            RefreshQuestion();
-        }
-
-        private void btnAnswer2_Click(object sender, EventArgs e) {
-            RefreshQuestion();
-        }
-
-        private void btnAnswer3_Click(object sender, EventArgs e) {
+        private void btnAnswer5_Click(object sender, EventArgs e) {
             RefreshQuestion();
         }
 
@@ -62,7 +54,15 @@ namespace Subject_Recommendator {
             RefreshQuestion();
         }
 
-        private void btnAnswer5_Click(object sender, EventArgs e) {
+        private void btnAnswer3_Click(object sender, EventArgs e) {
+            RefreshQuestion();
+        }
+
+        private void btnAnswer2_Click(object sender, EventArgs e) {
+            RefreshQuestion();
+        }
+
+        private void btnAnswer1_Click(object sender, EventArgs e) {
             RefreshQuestion();
         }
     }

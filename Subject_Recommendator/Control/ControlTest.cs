@@ -32,8 +32,8 @@ namespace Subject_Recommendator {
             QuestionList.Clear();
             while (reader.Read()) {
                 Question question = new Question();
-                question.Id = reader.GetInt32(0);
-                question.Content = reader.GetString(1);
+                question.Id = int.Parse(reader["ID"].ToString());
+                question.Content = reader["CONTENT"].ToString();
                 QuestionList.Add(question);
             }
             reader.Close();

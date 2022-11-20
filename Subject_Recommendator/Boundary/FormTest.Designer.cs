@@ -23,36 +23,36 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.btnAnswer1 = new System.Windows.Forms.Button();
-            this.btnAnswer2 = new System.Windows.Forms.Button();
-            this.btnAnswer3 = new System.Windows.Forms.Button();
-            this.btnAnswer4 = new System.Windows.Forms.Button();
             this.btnAnswer5 = new System.Windows.Forms.Button();
+            this.btnAnswer4 = new System.Windows.Forms.Button();
+            this.btnAnswer3 = new System.Windows.Forms.Button();
+            this.btnAnswer2 = new System.Windows.Forms.Button();
+            this.btnAnswer1 = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.txtQuestion = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // btnAnswer1
+            // btnAnswer5
             // 
-            this.btnAnswer1.Font = new System.Drawing.Font("맑은 고딕", 12F);
-            this.btnAnswer1.Location = new System.Drawing.Point(40, 177);
-            this.btnAnswer1.Name = "btnAnswer1";
-            this.btnAnswer1.Size = new System.Drawing.Size(100, 100);
-            this.btnAnswer1.TabIndex = 0;
-            this.btnAnswer1.Text = "매우\r\n그렇다";
-            this.btnAnswer1.UseVisualStyleBackColor = true;
-            this.btnAnswer1.Click += new System.EventHandler(this.btnAnswer1_Click);
+            this.btnAnswer5.Font = new System.Drawing.Font("맑은 고딕", 12F);
+            this.btnAnswer5.Location = new System.Drawing.Point(40, 177);
+            this.btnAnswer5.Name = "btnAnswer5";
+            this.btnAnswer5.Size = new System.Drawing.Size(100, 100);
+            this.btnAnswer5.TabIndex = 0;
+            this.btnAnswer5.Text = "매우\r\n그렇다";
+            this.btnAnswer5.UseVisualStyleBackColor = true;
+            this.btnAnswer5.Click += new System.EventHandler(this.btnAnswer5_Click);
             // 
-            // btnAnswer2
+            // btnAnswer4
             // 
-            this.btnAnswer2.Font = new System.Drawing.Font("맑은 고딕", 12F);
-            this.btnAnswer2.Location = new System.Drawing.Point(170, 187);
-            this.btnAnswer2.Name = "btnAnswer2";
-            this.btnAnswer2.Size = new System.Drawing.Size(90, 90);
-            this.btnAnswer2.TabIndex = 1;
-            this.btnAnswer2.Text = "그렇다";
-            this.btnAnswer2.UseVisualStyleBackColor = true;
-            this.btnAnswer2.Click += new System.EventHandler(this.btnAnswer2_Click);
+            this.btnAnswer4.Font = new System.Drawing.Font("맑은 고딕", 12F);
+            this.btnAnswer4.Location = new System.Drawing.Point(170, 187);
+            this.btnAnswer4.Name = "btnAnswer4";
+            this.btnAnswer4.Size = new System.Drawing.Size(90, 90);
+            this.btnAnswer4.TabIndex = 1;
+            this.btnAnswer4.Text = "그렇다";
+            this.btnAnswer4.UseVisualStyleBackColor = true;
+            this.btnAnswer4.Click += new System.EventHandler(this.btnAnswer4_Click);
             // 
             // btnAnswer3
             // 
@@ -65,27 +65,27 @@
             this.btnAnswer3.UseVisualStyleBackColor = true;
             this.btnAnswer3.Click += new System.EventHandler(this.btnAnswer3_Click);
             // 
-            // btnAnswer4
+            // btnAnswer2
             // 
-            this.btnAnswer4.Font = new System.Drawing.Font("맑은 고딕", 12F);
-            this.btnAnswer4.Location = new System.Drawing.Point(400, 187);
-            this.btnAnswer4.Name = "btnAnswer4";
-            this.btnAnswer4.Size = new System.Drawing.Size(90, 90);
-            this.btnAnswer4.TabIndex = 3;
-            this.btnAnswer4.Text = "아니다";
-            this.btnAnswer4.UseVisualStyleBackColor = true;
-            this.btnAnswer4.Click += new System.EventHandler(this.btnAnswer4_Click);
+            this.btnAnswer2.Font = new System.Drawing.Font("맑은 고딕", 12F);
+            this.btnAnswer2.Location = new System.Drawing.Point(400, 187);
+            this.btnAnswer2.Name = "btnAnswer2";
+            this.btnAnswer2.Size = new System.Drawing.Size(90, 90);
+            this.btnAnswer2.TabIndex = 3;
+            this.btnAnswer2.Text = "아니다";
+            this.btnAnswer2.UseVisualStyleBackColor = true;
+            this.btnAnswer2.Click += new System.EventHandler(this.btnAnswer2_Click);
             // 
-            // btnAnswer5
+            // btnAnswer1
             // 
-            this.btnAnswer5.Font = new System.Drawing.Font("맑은 고딕", 12F);
-            this.btnAnswer5.Location = new System.Drawing.Point(520, 177);
-            this.btnAnswer5.Name = "btnAnswer5";
-            this.btnAnswer5.Size = new System.Drawing.Size(100, 100);
-            this.btnAnswer5.TabIndex = 4;
-            this.btnAnswer5.Text = "매우\r\n아니다";
-            this.btnAnswer5.UseVisualStyleBackColor = true;
-            this.btnAnswer5.Click += new System.EventHandler(this.btnAnswer5_Click);
+            this.btnAnswer1.Font = new System.Drawing.Font("맑은 고딕", 12F);
+            this.btnAnswer1.Location = new System.Drawing.Point(520, 177);
+            this.btnAnswer1.Name = "btnAnswer1";
+            this.btnAnswer1.Size = new System.Drawing.Size(100, 100);
+            this.btnAnswer1.TabIndex = 4;
+            this.btnAnswer1.Text = "매우\r\n아니다";
+            this.btnAnswer1.UseVisualStyleBackColor = true;
+            this.btnAnswer1.Click += new System.EventHandler(this.btnAnswer1_Click);
             // 
             // btnExit
             // 
@@ -115,11 +115,11 @@
             this.ClientSize = new System.Drawing.Size(668, 405);
             this.Controls.Add(this.txtQuestion);
             this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.btnAnswer5);
-            this.Controls.Add(this.btnAnswer4);
-            this.Controls.Add(this.btnAnswer3);
-            this.Controls.Add(this.btnAnswer2);
             this.Controls.Add(this.btnAnswer1);
+            this.Controls.Add(this.btnAnswer2);
+            this.Controls.Add(this.btnAnswer3);
+            this.Controls.Add(this.btnAnswer4);
+            this.Controls.Add(this.btnAnswer5);
             this.Name = "FormTest";
             this.RightToLeftLayout = true;
             this.Text = "진단검사";
@@ -130,11 +130,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnAnswer1;
-        private System.Windows.Forms.Button btnAnswer2;
-        private System.Windows.Forms.Button btnAnswer3;
-        private System.Windows.Forms.Button btnAnswer4;
         private System.Windows.Forms.Button btnAnswer5;
+        private System.Windows.Forms.Button btnAnswer4;
+        private System.Windows.Forms.Button btnAnswer3;
+        private System.Windows.Forms.Button btnAnswer2;
+        private System.Windows.Forms.Button btnAnswer1;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.TextBox txtQuestion;
     }
