@@ -43,9 +43,8 @@ namespace Subject_Recommendator {
 
         // 삭제 버튼 클릭 시
         private void btnDelete_Click(object sender, EventArgs e) {
-            
             DialogResult rs = MessageBox.Show("교과목을 즐겨찾기에서 삭제하시겠습니까?", "교과목 즐겨찾기 삭제",
-                            MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
+                            MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
             if (rs == DialogResult.Yes) {
                 ctrl.DeleteFavorite(int.Parse(lvSubject.SelectedItems[0].Text));
                 MessageBox.Show("교과목을 삭제하였습니다.", "교과목 즐겨찾기 삭제",
