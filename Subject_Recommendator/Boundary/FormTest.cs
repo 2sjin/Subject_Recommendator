@@ -1,28 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Subject_Recommendator {
     public partial class FormTest : Form {
         // 필드
         ControlTest ctrl = new ControlTest();   // 제어 객체
-        int questionIndex = 0;                  // 문항 인덱스
 
         public FormTest() {
             InitializeComponent();
+            ctrl.initScore();
             RefreshQuestion();
         }
 
         // 문항 갱신
         public void RefreshQuestion() {
             // 마지막 문항일 경우 결과 Form 출력
-            if (questionIndex >= ctrl.QuestionList.Count) {
+            if (ctrl.CurrentQuestionId >= ctrl.QuestionList.Count) {
                 this.Close();
                 FormResult frmResult = new FormResult();
                 frmResult.ShowDialog();
@@ -30,8 +23,8 @@ namespace Subject_Recommendator {
             }
 
             // 다음 문항으로 이동
-            txtQuestion.Text = ctrl.QuestionList[questionIndex].Content;
-            questionIndex++;
+            txtQuestion.Text = ctrl.QuestionList[ctrl.CurrentQuestionId].Content;
+            ctrl.CurrentQuestionId++;
         }
 
         private void btnExit_Click(object sender, EventArgs e) {
@@ -47,22 +40,27 @@ namespace Subject_Recommendator {
         }
 
         private void btnAnswer5_Click(object sender, EventArgs e) {
+            ctrl.abc(ctrl.CurrentQuestionId, 5);
             RefreshQuestion();
         }
 
         private void btnAnswer4_Click(object sender, EventArgs e) {
+            ctrl.abc(ctrl.CurrentQuestionId, 4);
             RefreshQuestion();
         }
 
         private void btnAnswer3_Click(object sender, EventArgs e) {
+            ctrl.abc(ctrl.CurrentQuestionId, 3);
             RefreshQuestion();
         }
 
         private void btnAnswer2_Click(object sender, EventArgs e) {
+            ctrl.abc(ctrl.CurrentQuestionId, 2);
             RefreshQuestion();
         }
 
         private void btnAnswer1_Click(object sender, EventArgs e) {
+            ctrl.abc(ctrl.CurrentQuestionId, 1);
             RefreshQuestion();
         }
     }
