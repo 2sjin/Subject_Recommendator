@@ -10,29 +10,29 @@ namespace Subject_Recommendator {
         // 필드
         OleDbDataReader reader;
 
-        // 교과목 List 프로퍼티
+        // 즐겨찾기 교과목 List(제네릭 컬렉션) 프로퍼티
         public List<Subject> FavoriteList { get; set; }
 
         // 생성자
         public ControlFavorite() {
             FavoriteList = new List<Subject>();
-            Refresh();
+            RefreshData();
         }
 
         // 추상 메소드 재정의: 데이터 새로고침 실행
-        public override void Refresh() {
+        public override void RefreshData() {
             string sql = "SELECT SUBJECT_ID, SUBJECT_NAME, LIMIT_YEAR, TERM, LECTURE_TYPE, TEAM_PROJECT " +
                         "FROM FAVORITE, SUBJECT " +
                         "WHERE FAVORITE.SUBJECT_ID=SUBJECT.ID";
             FavoriteList = new List<Subject>();
             OpenConnection();
             reader = ExecuteQuery(sql);
-            RunPostRefresh();
+            RunPostRefreshData();
             CloseConnection();
         }
 
         // 추상 메소드 재정의: 데이터 새로고침 실행 후처리
-        public override void RunPostRefresh() {
+        public override void RunPostRefreshData() {
             FavoriteList.Clear();
             while (reader.Read()) {
                 Subject subject = new Subject();

@@ -18,7 +18,7 @@ namespace Subject_Recommendator {
 
         // 즐겨찾기 리스트뷰 갱신
         public void RefreshListView() {
-            ctrl.Refresh();
+            ctrl.RefreshData();
             SubjectListView.Items.Clear();
             foreach (Subject s in ctrl.FavoriteList) {
                 ListViewItem item = new ListViewItem();
@@ -34,7 +34,7 @@ namespace Subject_Recommendator {
 
         // 추가 버튼 클릭 시
         private void btnAdd_Click(object sender, EventArgs e) {
-            FormSearch frmSearch = new FormSearch();
+            FormSearch frmSearch = new FormSearch("FAVORITE");
             frmSearch.Text = "즐겨찾기 추가";
             frmSearch.BtnAddFavorite.Visible = true;
             frmSearch.ShowDialog();

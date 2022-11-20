@@ -30,10 +30,10 @@ namespace Subject_Recommendator {
         }
 
         // 추상 메소드 선언: 데이터 새로고침 실행
-        abstract public void Refresh();
+        abstract public void RefreshData();
 
         // 추상 메소드 선언: 데이터 새로고침 실행 후처리
-        abstract public void RunPostRefresh();
+        abstract public void RunPostRefreshData();
 
         // Connection 닫기
         public void CloseConnection() {

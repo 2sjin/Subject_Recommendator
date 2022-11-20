@@ -10,25 +10,25 @@ namespace Subject_Recommendator {
         // 필드
         OleDbDataReader reader;
 
-        // 교과목 List 프로퍼티
+        // 교과목 List(제네릭 컬렉션) 프로퍼티
         public List<Subject> SubjectList { get; set; }
 
         // 생성자
         public ControlSearch() {
             SubjectList = new List<Subject>();
-            Refresh();
+            RefreshData();
         }
 
         // 추상 메소드 재정의: 데이터 새로고침 실행
-        public override void Refresh() {
+        public override void RefreshData() {
             OpenConnection();
             reader = ExecuteQuery("SELECT * FROM SUBJECT");
-            RunPostRefresh();
+            RunPostRefreshData();
             CloseConnection();
         }
 
         // 추상 메소드 재정의: 데이터 새로고침 실행 후처리
-        public override void RunPostRefresh() {
+        public override void RunPostRefreshData() {
             SubjectList.Clear();
             while (reader.Read()) {
                 Subject subject = new Subject();
@@ -49,7 +49,22 @@ namespace Subject_Recommendator {
             string sql = $"SELECT * FROM SUBJECT WHERE SUBJECT_NAME LIKE '%{name}%'" + filter;
             OpenConnection();
             reader = ExecuteQuery(sql);
-            RunPostRefresh();
+            RunPostRefreshData();
+            CloseConnection();
+        }
+
+        // 메소드: 이미 즐겨찾기에 추가된 교과목을 리스트에서 제거
+        public void removeAlreadyFavorite() {
+            string sql = "SELECT SUBJECT_ID FROM FAVORITE";
+            OpenConnection();
+            reader = ExecuteQuery(sql);
+
+            // 람다 (객체 변수 => 조건식)
+            // 교과목 객체의 ID 프로퍼티가 reader의 값과 일치하면 해당 객체 모두 삭제
+            while (reader.Read())
+                SubjectList.RemoveAll(s => s.Id == reader.GetInt32(0));
+
+            reader.Close();
             CloseConnection();
         }
     }

@@ -17,20 +17,20 @@ namespace Subject_Recommendator {
         // 생성자
         public ControlDetail(int subjectId) {
             this.subjectId = subjectId;
-            Refresh();
+            RefreshData();
         }
 
         // 추상 메소드 재정의: 데이터 새로고침 실행
-        override public void Refresh() {
+        override public void RefreshData() {
             SelectedSubject = new Subject();
             OpenConnection();
             reader = ExecuteQuery($"SELECT * FROM SUBJECT WHERE ID={subjectId}");
-            RunPostRefresh();
+            RunPostRefreshData();
             CloseConnection();
         }
 
         // 추상 메소드 재정의: SQL문 실행 후처리
-        public override void RunPostRefresh() {
+        public override void RunPostRefreshData() {
             while (reader.Read()) {
                 SelectedSubject.Id = reader.GetInt32(0);
                 SelectedSubject.Name = reader.GetString(1);

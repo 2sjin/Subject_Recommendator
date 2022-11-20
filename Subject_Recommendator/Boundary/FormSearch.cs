@@ -10,15 +10,18 @@ namespace Subject_Recommendator {
     public partial class FormSearch : Subject_Recommendator.FormSubjectListView {
         // 필드
         ControlSearch ctrl = new ControlSearch();     // 제어 객체
-        bool isShowPlaceHolder = true;  // PlaceHolder이 보이고 있는가를 나타내는 필드
+        bool isShowPlaceHolder = true;     // PlaceHolder가 보이고 있는가?
+        bool isFavoriteAddMode = false;    // 즐겨찾기 추가 모드로 Form 실행중인가?
 
         // 생성자
-        public FormSearch() {
+        public FormSearch(string mode="") {
+            if (mode == "FAVORITE")
+                isFavoriteAddMode = true;
             InitializeComponent();
             RefreshListView();
         }
 
-        // 프로퍼티: 즐겨찾기에 추가 버튼
+        // 프로퍼티: [즐겨찾기에 추가] 버튼
         public Button BtnAddFavorite {
             get { return btnAddFavorite; }
         }
@@ -44,6 +47,9 @@ namespace Subject_Recommendator {
 
         // 교과목 리스트뷰 갱신
         public void RefreshListView() {
+            if (isFavoriteAddMode)                  // 즐겨찾기 추가 모드로 Form 실행중이면
+                ctrl.removeAlreadyFavorite();       // 즐겨찾기 추가 불가능한 교과목은 제거
+
             SubjectListView.Items.Clear();
             foreach (Subject s in ctrl.SubjectList) {
                 ListViewItem item = new ListViewItem();
