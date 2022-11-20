@@ -35,7 +35,6 @@
             this.linkMyTistory = new System.Windows.Forms.LinkLabel();
             this.linkDeuCom = new System.Windows.Forms.LinkLabel();
             this.linkDeu = new System.Windows.Forms.LinkLabel();
-            this.btnDebug = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -45,7 +44,7 @@
             // 
             this.btnStart.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnStart.Font = new System.Drawing.Font("맑은 고딕", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnStart.Location = new System.Drawing.Point(0, 325);
+            this.btnStart.Location = new System.Drawing.Point(0, 337);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(571, 80);
             this.btnStart.TabIndex = 8;
@@ -98,7 +97,7 @@
             this.tabControl1.Location = new System.Drawing.Point(28, 48);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(520, 254);
+            this.tabControl1.Size = new System.Drawing.Size(520, 271);
             this.tabControl1.TabIndex = 11;
             // 
             // tabPage1
@@ -106,7 +105,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(512, 225);
+            this.tabPage1.Size = new System.Drawing.Size(512, 242);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "사용안내";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -117,11 +116,10 @@
             this.tabPage2.Controls.Add(this.linkMyTistory);
             this.tabPage2.Controls.Add(this.linkDeuCom);
             this.tabPage2.Controls.Add(this.linkDeu);
-            this.tabPage2.Controls.Add(this.btnDebug);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(512, 225);
+            this.tabPage2.Size = new System.Drawing.Size(512, 242);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "관련사이트";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -174,21 +172,11 @@
             this.linkDeu.Text = "동의대학교 홈페이지";
             this.linkDeu.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkDeu_LinkClicked);
             // 
-            // btnDebug
-            // 
-            this.btnDebug.Location = new System.Drawing.Point(404, 168);
-            this.btnDebug.Name = "btnDebug";
-            this.btnDebug.Size = new System.Drawing.Size(98, 37);
-            this.btnDebug.TabIndex = 9;
-            this.btnDebug.Text = "Debug";
-            this.btnDebug.UseVisualStyleBackColor = true;
-            this.btnDebug.Click += new System.EventHandler(this.btnDebug_Click);
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(571, 405);
+            this.ClientSize = new System.Drawing.Size(571, 417);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.menuStrip1);
@@ -216,7 +204,6 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Button btnDebug;
         private System.Windows.Forms.LinkLabel linkDeu;
         private System.Windows.Forms.LinkLabel linkDeuCom;
         private System.Windows.Forms.LinkLabel linkMyGithub;

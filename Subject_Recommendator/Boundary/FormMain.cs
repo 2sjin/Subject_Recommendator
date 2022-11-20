@@ -14,10 +14,6 @@ namespace Subject_Recommendator {
             frmTest.ShowDialog();
         }
 
-        private void btnDebug_Click(object sender, EventArgs e) {
-            new FormResult().Show();
-        }
-
         private void 교과목검색ToolStripMenuItem_Click(object sender, EventArgs e) {
             FormSearch frmSearch = new FormSearch();
             frmSearch.BtnAddFavorite.Visible = false;
