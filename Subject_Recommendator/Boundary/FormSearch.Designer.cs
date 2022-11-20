@@ -330,6 +330,7 @@
             this.ClientSize = new System.Drawing.Size(733, 753);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormSearch";
             this.Text = "교과목 검색";
             this.Controls.SetChildIndex(this.groupBox1, 0);

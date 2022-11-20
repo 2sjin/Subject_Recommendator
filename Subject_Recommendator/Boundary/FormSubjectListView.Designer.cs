@@ -85,7 +85,7 @@
             this.lvSubject.Location = new System.Drawing.Point(16, 54);
             this.lvSubject.MultiSelect = false;
             this.lvSubject.Name = "lvSubject";
-            this.lvSubject.Size = new System.Drawing.Size(641, 213);
+            this.lvSubject.Size = new System.Drawing.Size(641, 244);
             this.lvSubject.TabIndex = 197;
             this.lvSubject.UseCompatibleStateImageBehavior = false;
             this.lvSubject.View = System.Windows.Forms.View.Details;
@@ -140,6 +140,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(733, 464);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormSubjectListView";
             this.Text = "FormSubjectTable(상속용 Form)";
             this.panel1.ResumeLayout(false);

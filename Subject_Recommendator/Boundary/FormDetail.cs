@@ -9,6 +9,7 @@ namespace Subject_Recommendator {
         public FormDetail(int subjectId) {
             ctrl = new ControlDetail(subjectId);
             InitializeComponent();
+            this.MaximizeBox = false;   // 최대화 버튼 비활성화
             UpdateInfo();
         }
 

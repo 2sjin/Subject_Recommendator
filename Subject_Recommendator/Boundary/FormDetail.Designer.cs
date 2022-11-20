@@ -174,6 +174,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormDetail";
             this.Text = "교과목 상세 정보";
             this.ResumeLayout(false);

@@ -5,6 +5,7 @@ namespace Subject_Recommendator {
     public partial class FormSubjectListView : Form {
         public FormSubjectListView() {
             InitializeComponent();
+            this.MaximizeBox = false;   // 최대화 버튼 비활성화
         }
 
         // 교과목 테이블 프로퍼티

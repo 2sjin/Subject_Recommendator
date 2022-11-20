@@ -120,6 +120,7 @@
             this.Controls.Add(this.btnAnswer3);
             this.Controls.Add(this.btnAnswer4);
             this.Controls.Add(this.btnAnswer5);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormTest";
             this.RightToLeftLayout = true;
             this.Text = "진단검사";

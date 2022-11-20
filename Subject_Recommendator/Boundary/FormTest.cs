@@ -8,6 +8,7 @@ namespace Subject_Recommendator {
 
         public FormTest() {
             InitializeComponent();
+            this.MaximizeBox = false;   // 최대화 버튼 비활성화
             ctrl.initScore();
             RefreshQuestion();
         }

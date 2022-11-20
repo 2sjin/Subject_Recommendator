@@ -52,6 +52,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.ClientSize = new System.Drawing.Size(733, 460);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormResult";
             this.Text = "교과목 추천 결과";
             this.panel1.ResumeLayout(false);
