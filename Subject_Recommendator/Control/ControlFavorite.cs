@@ -24,7 +24,6 @@ namespace Subject_Recommendator {
             string sql = "SELECT SUBJECT_ID, SUBJECT_NAME, LIMIT_YEAR, TERM, LECTURE_TYPE, TEAM_PROJECT " +
                         "FROM FAVORITE, SUBJECT " +
                         "WHERE FAVORITE.SUBJECT_ID=SUBJECT.ID";
-            FavoriteList = new List<Subject>();
             OpenConnection();
             reader = ExecuteQuery(sql);
             RunPostRefreshData();
