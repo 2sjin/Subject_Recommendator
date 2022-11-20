@@ -36,6 +36,7 @@ namespace Subject_Recommendator {
         private void btnAdd_Click(object sender, EventArgs e) {
             FormSearch frmSearch = new FormSearch();
             frmSearch.Text = "즐겨찾기 추가";
+            frmSearch.BtnAddFavorite.Visible = true;
             frmSearch.ShowDialog();
             RefreshListView();
         }
