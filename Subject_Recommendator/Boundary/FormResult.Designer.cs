@@ -36,8 +36,8 @@
             // 
             // label1
             // 
-            this.label1.Size = new System.Drawing.Size(122, 15);
-            this.label1.Text = "추천 교과목 목록";
+            this.label1.Size = new System.Drawing.Size(314, 15);
+            this.label1.Text = "추천 교과목 목록(위에 있을수록 추천도 높음)";
             // 
             // button1
             // 
@@ -47,12 +47,12 @@
             this.button1.TabIndex = 5;
             this.button1.Text = "텍스트 파일로 저장";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FormResult
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.ClientSize = new System.Drawing.Size(733, 460);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormResult";
             this.Text = "교과목 추천 결과";
             this.panel1.ResumeLayout(false);

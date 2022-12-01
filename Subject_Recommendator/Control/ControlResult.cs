@@ -32,7 +32,7 @@ namespace Subject_Recommendator {
         public override void RunPostRefreshData() {
             int limitCount = 0;
             SubjectList.Clear();
-            while (reader.Read() && limitCount < 10) {
+            while (reader.Read() && limitCount < 7) {
                 Subject subject = new Subject();
                 subject.Id = reader.GetInt32(0);
                 subject.Name = reader.GetString(1);
