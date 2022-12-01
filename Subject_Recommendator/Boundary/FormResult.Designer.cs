@@ -47,7 +47,6 @@
             this.button1.TabIndex = 5;
             this.button1.Text = "텍스트 파일로 저장";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FormResult
             // 

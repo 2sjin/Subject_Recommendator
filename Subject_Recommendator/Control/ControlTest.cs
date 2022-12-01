@@ -48,8 +48,8 @@ namespace Subject_Recommendator {
             CloseConnection();
         }
 
-        // 메소드: 점수 증가
-        public void abc(int questionId, int answer) {
+        // 메소드: 과목별 점수 증가
+        public void increaseScore(int questionId, int answer) {
             string localSql1 = $"SELECT SUBJECT_ID, WEIGHT FROM SCORE_WEIGHT WHERE QUESTION_ID={questionId}";
 
             OpenConnection();

@@ -91,12 +91,12 @@ namespace Subject_Recommendator {
             return filterStr;
         }
 
-        // 검색 메소드
+        // 검색 메소드(중복된 ctrl.RefreshData() 메소드 호출)
         private void Search() {
             if (isShowPlaceHolder)
-                ctrl.Search("", GetFilterSQL());
+                ctrl.RefreshData(GetFilterSQL());
             else
-                ctrl.Search(txtSearch.Text, GetFilterSQL());
+                ctrl.RefreshData(GetFilterSQL(), txtSearch.Text);
             RefreshListView();
         }
 

@@ -26,9 +26,5 @@ namespace Subject_Recommendator {
                 SubjectListView.Items.Add(item);
             }
         }
-
-        private void button1_Click(object sender, EventArgs e) {
-
-        }
     }
 }

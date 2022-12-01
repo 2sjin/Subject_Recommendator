@@ -45,27 +45,27 @@ namespace Subject_Recommendator {
         }
 
         private void btnAnswer5_Click(object sender, EventArgs e) {
-            ctrl.abc(ctrl.CurrentQuestionId, 5);
+            ctrl.increaseScore(ctrl.CurrentQuestionId, 5);
             RefreshQuestion();
         }
 
         private void btnAnswer4_Click(object sender, EventArgs e) {
-            ctrl.abc(ctrl.CurrentQuestionId, 4);
+            ctrl.increaseScore(ctrl.CurrentQuestionId, 4);
             RefreshQuestion();
         }
 
         private void btnAnswer3_Click(object sender, EventArgs e) {
-            ctrl.abc(ctrl.CurrentQuestionId, 3);
+            ctrl.increaseScore(ctrl.CurrentQuestionId, 3);
             RefreshQuestion();
         }
 
         private void btnAnswer2_Click(object sender, EventArgs e) {
-            ctrl.abc(ctrl.CurrentQuestionId, 2);
+            ctrl.increaseScore(ctrl.CurrentQuestionId, 2);
             RefreshQuestion();
         }
 
         private void btnAnswer1_Click(object sender, EventArgs e) {
-            ctrl.abc(ctrl.CurrentQuestionId, 1);
+            ctrl.increaseScore(ctrl.CurrentQuestionId, 1);
             RefreshQuestion();
         }
     }

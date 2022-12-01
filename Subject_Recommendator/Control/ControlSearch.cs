@@ -19,10 +19,28 @@ namespace Subject_Recommendator {
             RefreshData();
         }
 
-        // 추상 메소드 재정의: 데이터 새로고침 실행
+        // 추상 메소드 재정의: 데이터 새로고침 실행(전체 교과목)
         public override void RefreshData() {
             OpenConnection();
             reader = ExecuteQuery("SELECT * FROM SUBJECT");
+            RunPostRefreshData();
+            CloseConnection();
+        }
+
+        // 메소드 중복: 데이터 새로고침 실행(교과목 필터링)
+        public void RefreshData(string filter) {
+            string sql = $"SELECT * FROM SUBJECT" + filter;
+            OpenConnection();
+            reader = ExecuteQuery(sql);
+            RunPostRefreshData();
+            CloseConnection();
+        }
+
+        // 메소드 중복: 데이터 새로고침 실행(교과목 검색 및 필터링)
+        public void RefreshData(string filter, string name) {
+            string sql = $"SELECT * FROM SUBJECT WHERE SUBJECT_NAME LIKE '%{name}%'" + filter;
+            OpenConnection();
+            reader = ExecuteQuery(sql);
             RunPostRefreshData();
             CloseConnection();
         }
@@ -41,16 +59,6 @@ namespace Subject_Recommendator {
                 SubjectList.Add(subject);
             }
             reader.Close();
-        }
-
-
-        // 메소드: 검색
-        public void Search(string name, string filter) {
-            string sql = $"SELECT * FROM SUBJECT WHERE SUBJECT_NAME LIKE '%{name}%'" + filter;
-            OpenConnection();
-            reader = ExecuteQuery(sql);
-            RunPostRefreshData();
-            CloseConnection();
         }
 
         // 메소드: 이미 즐겨찾기에 추가된 교과목을 리스트에서 제거
