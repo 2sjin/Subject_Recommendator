@@ -91,7 +91,7 @@ namespace Subject_Recommendator {
             return filterStr;
         }
 
-        // 검색 메소드(중복된 ctrl.RefreshData() 메소드 호출)
+        // 검색 메소드(중복된 ctrlFavorite.RefreshData() 메소드 호출)
         private void Search() {
             if (isShowPlaceHolder)
                 ctrl.RefreshData(GetFilterSQL());
@@ -111,13 +111,21 @@ namespace Subject_Recommendator {
                 Search();
         }
 
-        // 즐겨찾기에 추가 버튼 클릭 시 이벤트
+        // 즐겨찾기 추가 버튼 클릭 시 이벤트
         private void btnAddFavorite_Click(object sender, EventArgs e) {
             ControlFavorite ctrlFavorite = new ControlFavorite();
-            ctrlFavorite.AddFavorite(int.Parse(lvSubject.SelectedItems[0].Text));
-            MessageBox.Show("교과목을 즐겨찾기에 추가하였습니다.", "교과목 즐겨찾기 추가",
-                            MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Close();
+
+            // 즐겨찾기 추가(중복된 연산자 사용)
+            try {
+                if (ctrlFavorite + int.Parse(lvSubject.SelectedItems[0].Text)) {
+                    MessageBox.Show("교과목을 즐겨찾기에 추가하였습니다.", "교과목 즐겨찾기 추가",
+                                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
+            } catch (ArgumentOutOfRangeException err) {
+                MessageBox.Show("교과목을 선택한 후 [즐겨찾기 추가] 버튼을 눌러주세요.", "교과목 즐겨찾기 추가",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

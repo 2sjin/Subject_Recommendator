@@ -21,8 +21,13 @@ namespace Subject_Recommendator {
 
         // [상세 정보 보기] 버튼을 눌렀을 때
         private void btnDetail_Click(object sender, EventArgs e) {
-            FormDetail frmDetail = new FormDetail(int.Parse(lvSubject.SelectedItems[0].Text));
-            frmDetail.ShowDialog();
+            try {
+                FormDetail frmDetail = new FormDetail(int.Parse(lvSubject.SelectedItems[0].Text));
+                frmDetail.ShowDialog();
+            } catch (ArgumentOutOfRangeException err) {
+                MessageBox.Show("교과목을 선택한 후 [상세 정보 보기] 버튼을 눌러주세요.", "교과목 상세 정보 보기",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         // [닫기] 버튼을 눌렀을 때

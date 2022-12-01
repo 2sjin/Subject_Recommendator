@@ -46,18 +46,28 @@ namespace Subject_Recommendator {
             reader.Close();
         }
 
-        // 즐겨찾기 추가
-        public void AddFavorite(int subjectId) {
-            OpenConnection();
-            ExecuteUpdate($"INSERT INTO FAVORITE(SUBJECT_ID) VALUES({subjectId})");
-            CloseConnection();
+        // 연산자 중복: 즐겨찾기 추가
+        public static bool operator +(ControlFavorite ctrl, int subjectId) {
+            try {
+                ctrl.OpenConnection();
+                ctrl.ExecuteUpdate($"INSERT INTO FAVORITE(SUBJECT_ID) VALUES({subjectId})");
+                ctrl.CloseConnection();
+            } catch (Exception e) {
+                return false;   // 예외가 발생하면 false 리턴
+            }
+            return true;        // 예외가 발생하지 않으면 true 리턴
         }
 
-        // 즐겨찾기 삭제
-        public void DeleteFavorite(int subjectId) {
-            OpenConnection();
-            ExecuteUpdate($"DELETE FROM FAVORITE WHERE SUBJECT_ID={subjectId}");
-            CloseConnection();
+        // 연산자 중복: 즐겨찾기 삭제
+        public static bool operator -(ControlFavorite ctrl, int subjectId) {
+            try {
+                ctrl.OpenConnection();
+                ctrl.ExecuteUpdate($"DELETE FROM FAVORITE WHERE SUBJECT_ID={subjectId}");
+                ctrl.CloseConnection();
+            } catch (Exception e) {
+                return false;   // 예외가 발생하면 false 리턴
+            }
+            return true;        // 예외가 발생하지 않으면 true 리턴
         }
     }
 }
