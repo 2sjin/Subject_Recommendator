@@ -91,13 +91,24 @@ namespace Subject_Recommendator {
             return filterStr;
         }
 
-        // 검색 버튼 클릭 시 이벤트
-        private void btnSearch_Click(object sender, EventArgs e) {
+        // 검색 메소드
+        private void Search() {
             if (isShowPlaceHolder)
                 ctrl.Search("", GetFilterSQL());
             else
                 ctrl.Search(txtSearch.Text, GetFilterSQL());
             RefreshListView();
+        }
+
+        // 검색 버튼 클릭 시 검색 수행
+        private void btnSearch_Click(object sender, EventArgs e) {
+            Search();
+        }
+
+        // 검색창에서 [Enter] 키 클릭 시 검색 수행
+        private void txtSearch_KeyDown(object sender, KeyEventArgs e) {
+            if (e.KeyCode == Keys.Enter)
+                Search();
         }
 
         // 즐겨찾기에 추가 버튼 클릭 시 이벤트

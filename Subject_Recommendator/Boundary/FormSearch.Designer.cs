@@ -110,6 +110,7 @@
             this.txtSearch.TabIndex = 1;
             this.txtSearch.Text = "(검색어를 입력하세요)";
             this.txtSearch.Enter += new System.EventHandler(this.txtSearch_Enter);
+            this.txtSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyDown);
             this.txtSearch.Leave += new System.EventHandler(this.txtSearch_Leave);
             // 
             // comboBox1
@@ -330,7 +331,6 @@
             this.ClientSize = new System.Drawing.Size(733, 753);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormSearch";
             this.Text = "교과목 검색";
             this.Controls.SetChildIndex(this.groupBox1, 0);
