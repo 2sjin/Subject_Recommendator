@@ -30,12 +30,14 @@
             this.btnAnswer1 = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.txtQuestion = new System.Windows.Forms.TextBox();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.lblProgress = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnAnswer5
             // 
             this.btnAnswer5.Font = new System.Drawing.Font("맑은 고딕", 12F);
-            this.btnAnswer5.Location = new System.Drawing.Point(40, 177);
+            this.btnAnswer5.Location = new System.Drawing.Point(40, 241);
             this.btnAnswer5.Name = "btnAnswer5";
             this.btnAnswer5.Size = new System.Drawing.Size(100, 100);
             this.btnAnswer5.TabIndex = 0;
@@ -46,7 +48,7 @@
             // btnAnswer4
             // 
             this.btnAnswer4.Font = new System.Drawing.Font("맑은 고딕", 12F);
-            this.btnAnswer4.Location = new System.Drawing.Point(170, 187);
+            this.btnAnswer4.Location = new System.Drawing.Point(170, 251);
             this.btnAnswer4.Name = "btnAnswer4";
             this.btnAnswer4.Size = new System.Drawing.Size(90, 90);
             this.btnAnswer4.TabIndex = 1;
@@ -57,7 +59,7 @@
             // btnAnswer3
             // 
             this.btnAnswer3.Font = new System.Drawing.Font("맑은 고딕", 12F);
-            this.btnAnswer3.Location = new System.Drawing.Point(290, 197);
+            this.btnAnswer3.Location = new System.Drawing.Point(290, 261);
             this.btnAnswer3.Name = "btnAnswer3";
             this.btnAnswer3.Size = new System.Drawing.Size(80, 80);
             this.btnAnswer3.TabIndex = 2;
@@ -68,7 +70,7 @@
             // btnAnswer2
             // 
             this.btnAnswer2.Font = new System.Drawing.Font("맑은 고딕", 12F);
-            this.btnAnswer2.Location = new System.Drawing.Point(400, 187);
+            this.btnAnswer2.Location = new System.Drawing.Point(400, 251);
             this.btnAnswer2.Name = "btnAnswer2";
             this.btnAnswer2.Size = new System.Drawing.Size(90, 90);
             this.btnAnswer2.TabIndex = 3;
@@ -79,7 +81,7 @@
             // btnAnswer1
             // 
             this.btnAnswer1.Font = new System.Drawing.Font("맑은 고딕", 12F);
-            this.btnAnswer1.Location = new System.Drawing.Point(520, 177);
+            this.btnAnswer1.Location = new System.Drawing.Point(520, 241);
             this.btnAnswer1.Name = "btnAnswer1";
             this.btnAnswer1.Size = new System.Drawing.Size(100, 100);
             this.btnAnswer1.TabIndex = 4;
@@ -89,7 +91,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(254, 329);
+            this.btnExit.Location = new System.Drawing.Point(254, 393);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(156, 45);
             this.btnExit.TabIndex = 5;
@@ -108,11 +110,33 @@
             this.txtQuestion.TabIndex = 8;
             this.txtQuestion.Text = "테스트 문항입니다.";
             // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(40, 155);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(580, 23);
+            this.progressBar1.Step = 1;
+            this.progressBar1.TabIndex = 9;
+            this.progressBar1.Value = 50;
+            // 
+            // lblProgress
+            // 
+            this.lblProgress.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblProgress.Font = new System.Drawing.Font("굴림", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblProgress.Location = new System.Drawing.Point(40, 181);
+            this.lblProgress.Name = "lblProgress";
+            this.lblProgress.Size = new System.Drawing.Size(580, 23);
+            this.lblProgress.TabIndex = 10;
+            this.lblProgress.Text = "1 / 17";
+            this.lblProgress.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // FormTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(668, 405);
+            this.ClientSize = new System.Drawing.Size(668, 468);
+            this.Controls.Add(this.lblProgress);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.txtQuestion);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnAnswer1);
@@ -138,5 +162,7 @@
         private System.Windows.Forms.Button btnAnswer1;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.TextBox txtQuestion;
+        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.Label lblProgress;
     }
 }

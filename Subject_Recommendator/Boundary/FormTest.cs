@@ -15,6 +15,10 @@ namespace Subject_Recommendator {
 
         // 문항 갱신
         public void RefreshQuestion() {
+            // 프로그레스 바 및 레이블 갱신
+            progressBar1.Value = (ctrl.CurrentQuestionId * 100) / ctrl.QuestionList.Count;
+            lblProgress.Text = $"{ctrl.QuestionList.Count} 중 {ctrl.CurrentQuestionId} 응답 ({progressBar1.Value} %)";
+
             // 마지막 문항일 경우 결과 Form 출력
             if (ctrl.CurrentQuestionId >= ctrl.QuestionList.Count) {
                 this.Close();
