@@ -29,7 +29,7 @@ namespace Subject_Recommendator {
 
         // 메소드 중복: 데이터 새로고침 실행(교과목 필터링)
         public void RefreshData(string filter) {
-            string sql = $"SELECT * FROM SUBJECT" + filter;
+            string sql = $"SELECT * FROM SUBJECT WHERE 1=1 " + filter;
             OpenConnection();
             reader = ExecuteQuery(sql);
             RunPostRefreshData();

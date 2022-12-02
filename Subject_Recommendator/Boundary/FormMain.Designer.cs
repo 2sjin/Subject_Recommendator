@@ -35,8 +35,11 @@
             this.linkMyTistory = new System.Windows.Forms.LinkLabel();
             this.linkDeuCom = new System.Windows.Forms.LinkLabel();
             this.linkDeu = new System.Windows.Forms.LinkLabel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,7 +73,7 @@
             // 
             this.교과목검색ToolStripMenuItem.Font = new System.Drawing.Font("굴림", 9F);
             this.교과목검색ToolStripMenuItem.Name = "교과목검색ToolStripMenuItem";
-            this.교과목검색ToolStripMenuItem.Size = new System.Drawing.Size(101, 20);
+            this.교과목검색ToolStripMenuItem.Size = new System.Drawing.Size(101, 26);
             this.교과목검색ToolStripMenuItem.Text = "교과목 검색";
             this.교과목검색ToolStripMenuItem.Click += new System.EventHandler(this.교과목검색ToolStripMenuItem_Click);
             // 
@@ -78,14 +81,14 @@
             // 
             this.즐겨찾기ToolStripMenuItem.Font = new System.Drawing.Font("굴림", 9F);
             this.즐겨찾기ToolStripMenuItem.Name = "즐겨찾기ToolStripMenuItem";
-            this.즐겨찾기ToolStripMenuItem.Size = new System.Drawing.Size(131, 20);
+            this.즐겨찾기ToolStripMenuItem.Size = new System.Drawing.Size(131, 26);
             this.즐겨찾기ToolStripMenuItem.Text = "교과목 즐겨찾기";
             this.즐겨찾기ToolStripMenuItem.Click += new System.EventHandler(this.즐겨찾기ToolStripMenuItem_Click);
             // 
             // 종료ToolStripMenuItem
             // 
             this.종료ToolStripMenuItem.Name = "종료ToolStripMenuItem";
-            this.종료ToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.종료ToolStripMenuItem.Size = new System.Drawing.Size(66, 26);
             this.종료ToolStripMenuItem.Text = "끝내기";
             this.종료ToolStripMenuItem.Click += new System.EventHandler(this.끝내기ToolStripMenuItem_Click);
             // 
@@ -102,12 +105,14 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label2);
+            this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(512, 242);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "사용안내";
+            this.tabPage1.Text = "유의사항";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // tabPage2
@@ -172,6 +177,28 @@
             this.linkDeu.Text = "동의대학교 홈페이지";
             this.linkDeu.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkDeu_LinkClicked);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("굴림", 14F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(17, 27);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(110, 24);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "유의사항";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("굴림", 9F);
+            this.label2.Location = new System.Drawing.Point(18, 72);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(436, 120);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "● 아래 [진단검사 시작] 버튼을 눌러 진단검사를 진행하십시오.\r\n\r\n● 진단검사 예상 소요 시간은 1~2분입니다.\r\n\r\n● 정확한 결과를 원한다" +
+    "면, 가능한 \'보통\'을 선택하지 마십시오.\r\n\r\n● 문항을 정확하게 읽지 않고 한 버튼을 반복해서 선택하면,\r\n    부정확한 결과가 출력될 수" +
+    " 있습니다.";
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -189,6 +216,8 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.ResumeLayout(false);
@@ -209,6 +238,8 @@
         private System.Windows.Forms.LinkLabel linkMyGithub;
         private System.Windows.Forms.LinkLabel linkMyTistory;
         private System.Windows.Forms.ToolStripMenuItem 종료ToolStripMenuItem;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }
 
