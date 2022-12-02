@@ -36,12 +36,17 @@
             this.labelLectureType = new System.Windows.Forms.Label();
             this.labelTeamProject = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
+            this.labelSubjectId = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(57, 55);
+            this.label1.Location = new System.Drawing.Point(3, 46);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 15);
             this.label1.TabIndex = 0;
@@ -49,8 +54,9 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(57, 110);
+            this.label2.Location = new System.Drawing.Point(3, 82);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(42, 15);
             this.label2.TabIndex = 1;
@@ -58,8 +64,9 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(270, 110);
+            this.label3.Location = new System.Drawing.Point(286, 82);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(72, 15);
             this.label3.TabIndex = 2;
@@ -67,8 +74,9 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(57, 164);
+            this.label4.Location = new System.Drawing.Point(3, 119);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(72, 15);
             this.label4.TabIndex = 3;
@@ -76,8 +84,9 @@
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(270, 164);
+            this.label5.Location = new System.Drawing.Point(286, 119);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(67, 15);
             this.label5.TabIndex = 4;
@@ -103,8 +112,9 @@
             // 
             // labelSubjectName
             // 
+            this.labelSubjectName.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelSubjectName.AutoSize = true;
-            this.labelSubjectName.Location = new System.Drawing.Point(145, 55);
+            this.labelSubjectName.Location = new System.Drawing.Point(104, 46);
             this.labelSubjectName.Name = "labelSubjectName";
             this.labelSubjectName.Size = new System.Drawing.Size(122, 15);
             this.labelSubjectName.TabIndex = 7;
@@ -112,8 +122,9 @@
             // 
             // labelYear
             // 
+            this.labelYear.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelYear.AutoSize = true;
-            this.labelYear.Location = new System.Drawing.Point(145, 110);
+            this.labelYear.Location = new System.Drawing.Point(104, 82);
             this.labelYear.Name = "labelYear";
             this.labelYear.Size = new System.Drawing.Size(65, 15);
             this.labelYear.TabIndex = 8;
@@ -121,8 +132,9 @@
             // 
             // labelTerm
             // 
+            this.labelTerm.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelTerm.AutoSize = true;
-            this.labelTerm.Location = new System.Drawing.Point(368, 110);
+            this.labelTerm.Location = new System.Drawing.Point(369, 82);
             this.labelTerm.Name = "labelTerm";
             this.labelTerm.Size = new System.Drawing.Size(68, 15);
             this.labelTerm.TabIndex = 8;
@@ -130,8 +142,9 @@
             // 
             // labelLectureType
             // 
+            this.labelLectureType.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelLectureType.AutoSize = true;
-            this.labelLectureType.Location = new System.Drawing.Point(145, 164);
+            this.labelLectureType.Location = new System.Drawing.Point(104, 119);
             this.labelLectureType.Name = "labelLectureType";
             this.labelLectureType.Size = new System.Drawing.Size(117, 15);
             this.labelLectureType.TabIndex = 9;
@@ -139,8 +152,9 @@
             // 
             // labelTeamProject
             // 
+            this.labelTeamProject.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelTeamProject.AutoSize = true;
-            this.labelTeamProject.Location = new System.Drawing.Point(368, 164);
+            this.labelTeamProject.Location = new System.Drawing.Point(369, 119);
             this.labelTeamProject.Name = "labelTeamProject";
             this.labelTeamProject.Size = new System.Drawing.Size(118, 15);
             this.labelTeamProject.TabIndex = 10;
@@ -156,27 +170,70 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // labelSubjectId
+            // 
+            this.labelSubjectId.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.labelSubjectId.AutoSize = true;
+            this.labelSubjectId.Location = new System.Drawing.Point(104, 10);
+            this.labelSubjectId.Name = "labelSubjectId";
+            this.labelSubjectId.Size = new System.Drawing.Size(97, 15);
+            this.labelSubjectId.TabIndex = 13;
+            this.labelSubjectId.Text = "labelSubjectId";
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(3, 10);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(87, 15);
+            this.label8.TabIndex = 12;
+            this.label8.Text = "교과목번호:";
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tableLayoutPanel1.ColumnCount = 4;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.32193F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.61972F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.7002F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.35815F));
+            this.tableLayoutPanel1.Controls.Add(this.labelSubjectId, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.labelTeamProject, 3, 3);
+            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.labelLectureType, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.labelSubjectName, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label5, 2, 3);
+            this.tableLayoutPanel1.Controls.Add(this.labelTerm, 3, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.labelYear, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label4, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.label3, 2, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label8, 0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(60, 38);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 4;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(497, 145);
+            this.tableLayoutPanel1.TabIndex = 14;
+            // 
             // FormDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(611, 490);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.labelTeamProject);
-            this.Controls.Add(this.labelLectureType);
-            this.Controls.Add(this.labelTerm);
-            this.Controls.Add(this.labelYear);
-            this.Controls.Add(this.labelSubjectName);
             this.Controls.Add(this.txtOutline);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormDetail";
             this.Text = "교과목 상세 정보";
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -197,5 +254,8 @@
         private System.Windows.Forms.Label labelLectureType;
         private System.Windows.Forms.Label labelTeamProject;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Label labelSubjectId;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }
