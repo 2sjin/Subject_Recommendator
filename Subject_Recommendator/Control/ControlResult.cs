@@ -48,12 +48,18 @@ namespace Subject_Recommendator {
         // 메소드: 교과목 추천 결과 데이터를 텍스트 파일로 저장(쓰기)
         // 저장 성공 시 null 리턴, 예외 발생 시 예외 메시지 리턴
         public string SaveToTextFile(string filepath) {
+            int rank = 0;
             FileStream fs = null;
             StreamWriter sw = null;
             try {
                 fs = new FileStream(filepath, FileMode.Create, FileAccess.Write);
-                sw = new StreamWriter(fs, System.Text.Encoding.Default);
-                sw.WriteLine("12345678");
+                sw = new StreamWriter(fs, System.Text.Encoding.Default);               
+                foreach (Subject subject in SubjectList) {
+                    sw.WriteLine("{0}위: {1} {2} ", ++rank, subject.Id, subject.Name);
+                    sw.WriteLine("({0}학년 {1}학기, {2}, 팀 과제 {3})",
+                        subject.Year, subject.Term, subject.LectureType, subject.TeamProject);
+                    sw.WriteLine();
+                }
                 return null;
             } catch (Exception e) {
                 return e.Message;
