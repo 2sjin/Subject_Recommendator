@@ -36,9 +36,16 @@ namespace Subject_Recommendator {
             CloseConnection();
         }
 
-        // 메소드 중복: 데이터 새로고침 실행(교과목 검색 및 필터링)
-        public void RefreshData(string filter, string name) {
-            string sql = $"SELECT * FROM SUBJECT WHERE SUBJECT_NAME LIKE '%{name}%'" + filter;
+        // 메소드 중복: 데이터 새로고침 실행(교과목명/교과목개요 검색 및 필터링)
+        public void RefreshData(string filter, string selectedInCombobox, string keyword) {
+            string category = "";
+            if (selectedInCombobox.Equals("교과목명"))
+                category = "SUBJECT_NAME";
+            else if (selectedInCombobox.Equals("교과목 개요"))
+                category = "OUTLINE";
+
+
+            string sql = $"SELECT * FROM SUBJECT WHERE {category} LIKE '%{keyword}%'" + filter;
             OpenConnection();
             reader = ExecuteQuery(sql);
             RunPostRefreshData();

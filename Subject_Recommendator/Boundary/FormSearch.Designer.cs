@@ -115,7 +115,7 @@
             // 
             // comboBox1
             // 
-            this.comboBox1.Enabled = false;
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "교과목명",
@@ -124,7 +124,6 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 23);
             this.comboBox1.TabIndex = 0;
-            this.comboBox1.Text = "교과목명";
             // 
             // groupBox2
             // 
@@ -333,6 +332,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "FormSearch";
             this.Text = "교과목 검색";
+            this.Load += new System.EventHandler(this.FormSearch_Load);
             this.Controls.SetChildIndex(this.groupBox1, 0);
             this.Controls.SetChildIndex(this.groupBox2, 0);
             this.Controls.SetChildIndex(this.panel1, 0);

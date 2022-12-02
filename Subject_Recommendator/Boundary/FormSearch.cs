@@ -96,7 +96,7 @@ namespace Subject_Recommendator {
             if (isShowPlaceHolder)
                 ctrl.RefreshData(GetFilterSQL());
             else
-                ctrl.RefreshData(GetFilterSQL(), txtSearch.Text);
+                ctrl.RefreshData(GetFilterSQL(), comboBox1.Text, txtSearch.Text);
             RefreshListView();
         }
 
@@ -126,6 +126,11 @@ namespace Subject_Recommendator {
                 MessageBox.Show("교과목을 선택한 후 [즐겨찾기 추가] 버튼을 눌러주세요.", "교과목 즐겨찾기 추가",
                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        // Form이 로드될 때, 콤보박스의 초기 텍스트 설정
+        private void FormSearch_Load(object sender, EventArgs e) {
+            comboBox1.Text = "교과목명";
         }
     }
 }
