@@ -44,7 +44,6 @@ namespace Subject_Recommendator {
             else if (selectedInCombobox.Equals("교과목 개요"))
                 category = "OUTLINE";
 
-
             string sql = $"SELECT * FROM SUBJECT WHERE {category} LIKE '%{keyword}%'" + filter;
             OpenConnection();
             reader = ExecuteQuery(sql);

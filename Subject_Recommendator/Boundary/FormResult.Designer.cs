@@ -23,30 +23,31 @@
         /// 이 메서드의 내용을 코드 편집기로 수정하지 마세요.
         /// </summary>
         private void InitializeComponent() {
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSaveToTextFile = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnSaveToTextFile);
             this.panel1.Controls.SetChildIndex(this.lvSubject, 0);
             this.panel1.Controls.SetChildIndex(this.label1, 0);
-            this.panel1.Controls.SetChildIndex(this.button1, 0);
+            this.panel1.Controls.SetChildIndex(this.btnSaveToTextFile, 0);
             // 
             // label1
             // 
             this.label1.Size = new System.Drawing.Size(314, 15);
             this.label1.Text = "추천 교과목 목록(위에 있을수록 추천도 높음)";
             // 
-            // button1
+            // btnSaveToTextFile
             // 
-            this.button1.Location = new System.Drawing.Point(267, 366);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(149, 32);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "텍스트 파일로 저장";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSaveToTextFile.Location = new System.Drawing.Point(267, 366);
+            this.btnSaveToTextFile.Name = "btnSaveToTextFile";
+            this.btnSaveToTextFile.Size = new System.Drawing.Size(149, 32);
+            this.btnSaveToTextFile.TabIndex = 5;
+            this.btnSaveToTextFile.Text = "텍스트 파일로 저장";
+            this.btnSaveToTextFile.UseVisualStyleBackColor = true;
+            this.btnSaveToTextFile.Click += new System.EventHandler(this.btnSaveToTextFile_Click);
             // 
             // FormResult
             // 
@@ -63,6 +64,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSaveToTextFile;
     }
 }

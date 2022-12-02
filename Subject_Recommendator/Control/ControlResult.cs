@@ -1,8 +1,6 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data.OleDb;
 
 namespace Subject_Recommendator {
@@ -44,6 +42,25 @@ namespace Subject_Recommendator {
                 limitCount++;
             }
             reader.Close();
+        }
+
+
+        // 메소드: 교과목 추천 결과 데이터를 텍스트 파일로 저장(쓰기)
+        // 저장 성공 시 null 리턴, 예외 발생 시 예외 메시지 리턴
+        public string SaveToTextFile(string filepath) {
+            FileStream fs = null;
+            StreamWriter sw = null;
+            try {
+                fs = new FileStream(filepath, FileMode.Create, FileAccess.Write);
+                sw = new StreamWriter(fs, System.Text.Encoding.Default);
+                sw.WriteLine("12345678");
+                return null;
+            } catch (Exception e) {
+                return e.Message;
+            } finally {
+                sw.Close();
+                fs.Close();
+            }
         }
     }
 }
