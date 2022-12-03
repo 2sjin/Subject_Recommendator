@@ -113,11 +113,11 @@
             // progressBar1
             // 
             this.progressBar1.Location = new System.Drawing.Point(40, 155);
+            this.progressBar1.MarqueeAnimationSpeed = 20;
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(580, 23);
             this.progressBar1.Step = 1;
             this.progressBar1.TabIndex = 9;
-            this.progressBar1.Value = 50;
             // 
             // lblProgress
             // 
@@ -125,7 +125,7 @@
             this.lblProgress.Font = new System.Drawing.Font("굴림", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lblProgress.Location = new System.Drawing.Point(40, 181);
             this.lblProgress.Name = "lblProgress";
-            this.lblProgress.Size = new System.Drawing.Size(580, 23);
+            this.lblProgress.Size = new System.Drawing.Size(580, 38);
             this.lblProgress.TabIndex = 10;
             this.lblProgress.Text = "1 / 17";
             this.lblProgress.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
