@@ -5,7 +5,7 @@ namespace Subject_Recommendator {
     // Control 클래스: FormTest와 Question을 연결하고 제어하기 위한 클래스 (ControlDB의 파생 클래스)
     class ControlTest : ControlDB {
         // 필드
-        OleDbDataReader reader;
+        OleDbDataReader reader;     // DB의 데이터를 읽기 위한 Reader
 
         // 프로퍼티
         public List<Question> QuestionList { get; set; }    // 진단검사 문항 List(제네릭 컬렉션)
@@ -46,7 +46,7 @@ namespace Subject_Recommendator {
             CloseConnection();
         }
 
-        // 메소드: 특정 문항(questionId)에 대한 가중치가 부여된 과목의 점수 증가
+        // 메소드: 특정 문항(questionId)에서 가중치가 부여된 과목들의 점수 증가
         public void increaseScore(int questionId, int answer) {
             string localSql1 = $"SELECT SUBJECT_ID, WEIGHT FROM SCORE_WEIGHT WHERE QUESTION_ID={questionId}";
 

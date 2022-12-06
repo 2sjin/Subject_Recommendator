@@ -1,11 +1,11 @@
 ﻿using System.Data.OleDb;
 
 namespace Subject_Recommendator {
-    // Control 클래스: 데이터베이스 연결을 위한 제어 클래스(추상 클래스)
+    // Control 클래스: 데이터베이스 연결 및 제어를 위한 클래스(추상 클래스)
     abstract public class ControlDB {
         // 필드
-        string conStr = "Provider=Microsoft.Jet.OLEDB.4.0; Data Source=schema.mdb";
-        OleDbConnection conn;
+        string conStr = "Provider=Microsoft.Jet.OLEDB.4.0; Data Source=schema.mdb";     // DB 드라이버 및 파일
+        OleDbConnection conn;       // OleDb 연결을 위한 커넥션
 
         // 메소드: Connection 생성 및 Open(데이터베이스 연결)
         public void OpenConnection() {

@@ -8,8 +8,8 @@ namespace Subject_Recommendator {
         // 필드
         ControlSearch ctrl = new ControlSearch();     // 제어 객체
         ControlFavorite ctrlFavorite = new ControlFavorite();   // 즐겨찾기 제어 객체(즐겨찾기 추가할 때 사용)
-        bool isShowPlaceHolder = true;     // PlaceHolder가 보이고 있는가?
-        bool isFavoriteAddMode = false;    // 지금 실행중인 검색 Form이 즐겨찾기 추가 모드로 실행중인가?
+        bool isShowPlaceHolder = true;     // PlaceHolder가 보이고 있는지 표시
+        bool isFavoriteAddMode = false;    // 지금 실행중인 검색 Form이 즐겨찾기 추가 모드로 실행중인지 표시
 
         // 프로퍼티: [즐겨찾기에 추가] 버튼(읽기 전용)
         public Button BtnAddFavorite {
@@ -118,7 +118,7 @@ namespace Subject_Recommendator {
             comboBox1.Text = "교과목명";
         }
 
-        // 메소드: 검색창에 포커싱 되었을 때(PlaceHolder)
+        // 메소드: 검색창에 포커싱 되었을 때(PlaceHolder 구현부)
         private void txtSearch_Enter(object sender, EventArgs e) {
             if (isShowPlaceHolder) {    // PlaceHolder가 보인다면
                 txtSearch.Text = "";    // PlaceHolder 없앰
@@ -127,7 +127,7 @@ namespace Subject_Recommendator {
             }
         }
 
-        // 메소드: 검색창에서 포커싱 해제가 되었을 때(PlaceHolder)
+        // 메소드: 검색창에서 포커싱 해제가 되었을 때(PlaceHolder 구현부)
         private void txtSearch_Leave(object sender, EventArgs e) {
             if ((isShowPlaceHolder == false) && txtSearch.Text.Equals("")) {    // 검색창이 비어있으면
                 txtSearch.Text = "(검색어를 입력하세요)";    // PlaceHolder 출력

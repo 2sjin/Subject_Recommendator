@@ -10,7 +10,7 @@ namespace Subject_Recommendator {
             this.MaximizeBox = false;   // 최대화 버튼 비활성화
         }
 
-        // 프로퍼티: 교과목 테이블
+        // 프로퍼티: 교과목 리스트뷰(읽기 전용)
         public ListView SubjectListView {
             get { return lvSubject; }
         }

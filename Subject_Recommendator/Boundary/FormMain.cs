@@ -30,7 +30,7 @@ namespace Subject_Recommendator {
             frmFavorite.ShowDialog();
         }
 
-        // 메소드: 메뉴에서 끝내기를 선택한 경우, 프로그램(메인 Form) 종료
+        // 메소드: 끝내기 메뉴 클릭 시, 프로그램(메인 Form) 종료
         private void 끝내기ToolStripMenuItem_Click(object sender, EventArgs e) {
             this.Close();
         }

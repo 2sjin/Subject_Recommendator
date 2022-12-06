@@ -6,7 +6,7 @@ namespace Subject_Recommendator {
     // Control 클래스: FormFavorite와 Subject를 연결하고 제어하기 위한 클래스 (ControlDB의 파생 클래스)
     class ControlFavorite : ControlDB {
         // 필드
-        OleDbDataReader reader;
+        OleDbDataReader reader;     // DB의 데이터를 읽기 위한 Reader
 
         // 프로퍼티: 즐겨찾기 교과목 List(제네릭 컬렉션)
         public List<Subject> FavoriteList { get; set; }

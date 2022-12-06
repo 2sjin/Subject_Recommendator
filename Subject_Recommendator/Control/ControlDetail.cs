@@ -4,10 +4,10 @@ namespace Subject_Recommendator {
     // Control 클래스: FormDetail과 Subject를 연결하고 제어하기 위한 클래스 (ControlDB의 파생 클래스)
     class ControlDetail : ControlDB {
         // 필드
-        OleDbDataReader reader;
-        int subjectId;
+        OleDbDataReader reader;     // DB의 데이터를 읽기 위한 Reader
+        int subjectId;              // 선택된 교과목의 교과목번호
 
-        // 프로퍼티: 교과목
+        // 프로퍼티: 선택된 교과목
         public Subject SelectedSubject { get; set; }
 
         // 생성자

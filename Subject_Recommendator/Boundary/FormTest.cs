@@ -25,7 +25,7 @@ namespace Subject_Recommendator {
 
             // 마지막 문항일 경우, 진단검사 완료 처리함
             if (ctrl.CurrentQuestionId >= ctrl.QuestionList.Count) {
-                completeTest();
+                CompleteTest();
                 return;
             }
 
@@ -35,7 +35,7 @@ namespace Subject_Recommendator {
         }
 
         // 메소드: 진단검사 완료 처리
-        public void completeTest() {
+        public void CompleteTest() {
             // 응답 버튼 비활성화
             btnAnswer1.Enabled = false;
             btnAnswer2.Enabled = false;
@@ -101,35 +101,35 @@ namespace Subject_Recommendator {
                 e.Cancel = true;        // 종료 이벤트를 취소함
         }
 
-        // 메소드: [매우 그렇다] 버튼 클릭 시
+        // 메소드: [매우 그렇다] 버튼 클릭 시, 점수 증가 및 다음 문항 이동
         private void btnAnswer5_Click(object sender, EventArgs e) {
-            ctrl.increaseScore(ctrl.CurrentQuestionId, 5);  // 현재 문항(ctrl.CurrentQuestionId)
+            ctrl.increaseScore(ctrl.CurrentQuestionId, 5);  // 현재 문항(ctrl.CurrentQuestionId) 점수 증가
             arrayOfBtnClickCount[0]++;                      // 버튼별 클릭 횟수 1 증가
             ShowNextQuestion();                              // 문항 갱신
         }
 
-        // 메소드: [그렇다] 버튼 클릭 시
+        // 메소드: [그렇다] 버튼 클릭 시, 점수 증가 및 다음 문항 이동
         private void btnAnswer4_Click(object sender, EventArgs e) {
             ctrl.increaseScore(ctrl.CurrentQuestionId, 4);
             arrayOfBtnClickCount[1]++;
             ShowNextQuestion();
         }
 
-        // 메소드: [보통] 버튼 클릭 시
+        // 메소드: [보통] 버튼 클릭 시, 점수 증가 및 다음 문항 이동
         private void btnAnswer3_Click(object sender, EventArgs e) {
             ctrl.increaseScore(ctrl.CurrentQuestionId, 3);
             arrayOfBtnClickCount[2]++;
             ShowNextQuestion();
         }
 
-        // 메소드: [아니다] 버튼 클릭 시
+        // 메소드: [아니다] 버튼 클릭 시, 점수 증가 및 다음 문항 이동
         private void btnAnswer2_Click(object sender, EventArgs e) {
             ctrl.increaseScore(ctrl.CurrentQuestionId, 2);
             arrayOfBtnClickCount[3]++;
             ShowNextQuestion();
         }
 
-        // 메소드: [매우 아니다] 버튼 클릭 시
+        // 메소드: [매우 아니다] 버튼 클릭 시, 점수 증가 및 다음 문항 이동
         private void btnAnswer1_Click(object sender, EventArgs e) {
             ctrl.increaseScore(ctrl.CurrentQuestionId, 1);
             arrayOfBtnClickCount[4]++;
