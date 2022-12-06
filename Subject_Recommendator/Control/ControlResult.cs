@@ -8,7 +8,7 @@ namespace Subject_Recommendator {
         // 필드
         OleDbDataReader reader;
 
-        // 교과목 List(제네릭 컬렉션) 프로퍼티
+        // 프로퍼티: 교과목 List(제네릭 컬렉션)
         public List<Subject> SubjectList { get; set; }
 
         // 생성자
@@ -43,7 +43,6 @@ namespace Subject_Recommendator {
             }
             reader.Close();
         }
-
 
         // 메소드: 교과목 추천 결과 데이터를 텍스트 파일로 저장(쓰기)
         // 저장 성공 시 null 리턴, 예외 발생 시 예외 메시지 리턴

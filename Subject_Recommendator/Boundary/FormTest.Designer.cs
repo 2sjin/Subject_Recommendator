@@ -148,6 +148,7 @@
             this.Name = "FormTest";
             this.RightToLeftLayout = true;
             this.Text = "진단검사";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormTest_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

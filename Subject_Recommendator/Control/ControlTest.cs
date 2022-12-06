@@ -1,18 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Data.OleDb;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Subject_Recommendator {
+    // 
     internal class ControlTest : ControlDB {
         // 필드
         OleDbDataReader reader;
 
         // 프로퍼티
-        public int CurrentQuestionId { get; set; }          // 현재 문항ID를 나타내는 프로퍼티
         public List<Question> QuestionList { get; set; }    // 진단검사 문항 List(제네릭 컬렉션)
+        public int CurrentQuestionId { get; set; }          // 현재 문항ID를 나타내는 프로퍼티   
 
         // 생성자
         public ControlTest() {
@@ -24,7 +21,7 @@ namespace Subject_Recommendator {
         // 추상 메소드 재정의: 데이터 새로고침 실행
         public override void RefreshData() {
             OpenConnection();
-            reader = ExecuteQuery("SELECT * FROM QUESTION");
+            reader = ExecuteQuery("SELECT * FROM QUESTION");    // SELECT문 실행
             RunPostRefreshData();
             CloseConnection();
         }

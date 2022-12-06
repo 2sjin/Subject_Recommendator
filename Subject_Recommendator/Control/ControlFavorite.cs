@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data.OleDb;
 
 namespace Subject_Recommendator {
@@ -10,7 +7,7 @@ namespace Subject_Recommendator {
         // 필드
         OleDbDataReader reader;
 
-        // 즐겨찾기 교과목 List(제네릭 컬렉션) 프로퍼티
+        // 프로퍼티: 즐겨찾기 교과목 List(제네릭 컬렉션)
         public List<Subject> FavoriteList { get; set; }
 
         // 생성자
@@ -25,7 +22,7 @@ namespace Subject_Recommendator {
                         "FROM FAVORITE, SUBJECT " +
                         "WHERE FAVORITE.SUBJECT_ID=SUBJECT.ID";
             OpenConnection();
-            reader = ExecuteQuery(sql);
+            reader = ExecuteQuery(sql);     // SELECT문 실행
             RunPostRefreshData();
             CloseConnection();
         }
@@ -50,7 +47,7 @@ namespace Subject_Recommendator {
         public static bool operator +(ControlFavorite ctrl, int subjectId) {
             try {
                 ctrl.OpenConnection();
-                ctrl.ExecuteUpdate($"INSERT INTO FAVORITE(SUBJECT_ID) VALUES({subjectId})");
+                ctrl.ExecuteUpdate($"INSERT INTO FAVORITE(SUBJECT_ID) VALUES({subjectId})");    // INSERT문 실행
                 ctrl.CloseConnection();
             } catch (Exception e) {
                 return false;   // 예외가 발생하면 false 리턴
@@ -62,7 +59,7 @@ namespace Subject_Recommendator {
         public static bool operator -(ControlFavorite ctrl, int subjectId) {
             try {
                 ctrl.OpenConnection();
-                ctrl.ExecuteUpdate($"DELETE FROM FAVORITE WHERE SUBJECT_ID={subjectId}");
+                ctrl.ExecuteUpdate($"DELETE FROM FAVORITE WHERE SUBJECT_ID={subjectId}");   // DELETE문 실행
                 ctrl.CloseConnection();
             } catch (Exception e) {
                 return false;   // 예외가 발생하면 false 리턴

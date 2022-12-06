@@ -55,6 +55,7 @@
             this.ClientSize = new System.Drawing.Size(733, 460);
             this.Name = "FormResult";
             this.Text = "교과목 추천 결과";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormResult_FormClosing);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

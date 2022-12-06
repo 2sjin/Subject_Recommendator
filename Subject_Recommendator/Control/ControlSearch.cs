@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.Data.OleDb;
 
 namespace Subject_Recommendator {
@@ -10,7 +6,7 @@ namespace Subject_Recommendator {
         // 필드
         OleDbDataReader reader;
 
-        // 교과목 List(제네릭 컬렉션) 프로퍼티
+        // 프로퍼티: 교과목 List(제네릭 컬렉션)
         public List<Subject> SubjectList { get; set; }
 
         // 생성자
@@ -22,14 +18,14 @@ namespace Subject_Recommendator {
         // 추상 메소드 재정의: 데이터 새로고침 실행(전체 교과목)
         public override void RefreshData() {
             OpenConnection();
-            reader = ExecuteQuery("SELECT * FROM SUBJECT");
+            reader = ExecuteQuery("SELECT * FROM SUBJECT");     // SELECT문 실행
             RunPostRefreshData();
             CloseConnection();
         }
 
         // 메소드 중복: 데이터 새로고침 실행(교과목 필터링)
         public void RefreshData(string filter) {
-            string sql = $"SELECT * FROM SUBJECT WHERE 1=1 " + filter;
+            string sql = $"SELECT * FROM SUBJECT WHERE 1=1 " + filter;  // SELECT문 실행(WHERE 1=1은 매개변수와 형식을 맞추기 위한 조건 - 무조건 참)
             OpenConnection();
             reader = ExecuteQuery(sql);
             RunPostRefreshData();

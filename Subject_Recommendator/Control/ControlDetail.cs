@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data.OleDb;
+﻿using System.Data.OleDb;
 
 namespace Subject_Recommendator {
     internal class ControlDetail : ControlDB {
@@ -11,7 +6,7 @@ namespace Subject_Recommendator {
         OleDbDataReader reader;
         int subjectId;
 
-        // 교과목 프로퍼티
+        // 프로퍼티: 교과목
         public Subject SelectedSubject { get; set; }
 
         // 생성자
@@ -24,7 +19,7 @@ namespace Subject_Recommendator {
         override public void RefreshData() {
             SelectedSubject = new Subject();
             OpenConnection();
-            reader = ExecuteQuery($"SELECT * FROM SUBJECT WHERE ID={subjectId}");
+            reader = ExecuteQuery($"SELECT * FROM SUBJECT WHERE ID={subjectId}");   // SELECT문 실행
             RunPostRefreshData();
             CloseConnection();
         }
