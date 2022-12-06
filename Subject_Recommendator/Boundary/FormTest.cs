@@ -3,6 +3,7 @@ using System.Drawing;
 using System.Windows.Forms;
 
 namespace Subject_Recommendator {
+    // Boundary 클래스: 진단검사 Form
     public partial class FormTest : Form {
         // 필드
         ControlTest ctrl = new ControlTest();   // 제어 객체
@@ -12,12 +13,12 @@ namespace Subject_Recommendator {
         public FormTest() {
             InitializeComponent();
             this.MaximizeBox = false;   // 최대화 버튼 비활성화
-            ctrl.initScore();
-            RefreshQuestion();
+            ctrl.initScore();           // DB에 저장된 진단검사 점수 초기화 
+            ShowNextQuestion();         // 다음 문항(첫번쨰 문항) 띄우기
         }
 
-        // 메소드: 문항 갱신
-        public void RefreshQuestion() {
+        // 메소드: 다음 문항 띄우기
+        public void ShowNextQuestion() {
             // 프로그레스 바 및 레이블 갱신
             progressBar1.Value = (ctrl.CurrentQuestionId * 100) / ctrl.QuestionList.Count;
             lblProgress.Text = $"{ctrl.QuestionList.Count} 중 {ctrl.CurrentQuestionId} 응답 ({progressBar1.Value} %)";
@@ -29,8 +30,8 @@ namespace Subject_Recommendator {
             }
 
             // 마지막 문항이 아닐 경우, 다음 문항을 불러옴
-            txtQuestion.Text = ctrl.QuestionList[ctrl.CurrentQuestionId].Content;
-            ctrl.CurrentQuestionId++;
+            txtQuestion.Text = ctrl.QuestionList[ctrl.CurrentQuestionId].Content;   // 문항 내용을 텍스트박스에 출력
+            ctrl.CurrentQuestionId++;   // 현재 문항 ID를 1 증가함
         }
 
         // 메소드: 진단검사 완료 처리
@@ -80,7 +81,7 @@ namespace Subject_Recommendator {
 
         // 메소드: Form을 닫기 전에 종료할지 묻는 메시지박스 출력
         private void FormTest_FormClosing(object sender, FormClosingEventArgs e) {
-            // 총 몇 문항에 응답하였는지 계산함
+            // 지금까지 몇 개의 문항에 응답하였는지 합산함
             int answeredQuestionCount = 0;
             for (int i = 0; i < arrayOfBtnClickCount.Length; i++)
                 answeredQuestionCount += arrayOfBtnClickCount[i];
@@ -102,37 +103,37 @@ namespace Subject_Recommendator {
 
         // 메소드: [매우 그렇다] 버튼 클릭 시
         private void btnAnswer5_Click(object sender, EventArgs e) {
-            ctrl.increaseScore(ctrl.CurrentQuestionId, 5);
-            arrayOfBtnClickCount[0] += 1;
-            RefreshQuestion();
+            ctrl.increaseScore(ctrl.CurrentQuestionId, 5);  // 현재 문항(ctrl.CurrentQuestionId)
+            arrayOfBtnClickCount[0]++;                      // 버튼별 클릭 횟수 1 증가
+            ShowNextQuestion();                              // 문항 갱신
         }
 
         // 메소드: [그렇다] 버튼 클릭 시
         private void btnAnswer4_Click(object sender, EventArgs e) {
             ctrl.increaseScore(ctrl.CurrentQuestionId, 4);
-            arrayOfBtnClickCount[1] += 1;
-            RefreshQuestion();
+            arrayOfBtnClickCount[1]++;
+            ShowNextQuestion();
         }
 
         // 메소드: [보통] 버튼 클릭 시
         private void btnAnswer3_Click(object sender, EventArgs e) {
             ctrl.increaseScore(ctrl.CurrentQuestionId, 3);
-            arrayOfBtnClickCount[2] += 1;
-            RefreshQuestion();
+            arrayOfBtnClickCount[2]++;
+            ShowNextQuestion();
         }
 
         // 메소드: [아니다] 버튼 클릭 시
         private void btnAnswer2_Click(object sender, EventArgs e) {
             ctrl.increaseScore(ctrl.CurrentQuestionId, 2);
-            arrayOfBtnClickCount[3] += 1;
-            RefreshQuestion();
+            arrayOfBtnClickCount[3]++;
+            ShowNextQuestion();
         }
 
         // 메소드: [매우 아니다] 버튼 클릭 시
         private void btnAnswer1_Click(object sender, EventArgs e) {
             ctrl.increaseScore(ctrl.CurrentQuestionId, 1);
-            arrayOfBtnClickCount[4] += 1;
-            RefreshQuestion();
+            arrayOfBtnClickCount[4]++;
+            ShowNextQuestion();
         }
 
         // 중첩 클래스: 사용자 정의 예외(이스터에그) - 예외 발생 시 메시지 출력함

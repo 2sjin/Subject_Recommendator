@@ -3,6 +3,7 @@ using System.IO;
 using System.Windows.Forms;
 
 namespace Subject_Recommendator {
+    // Boundary 클래스: 교과목 추천 결과 Form (FormSubjectlistView의 파생 클래스)
     public partial class FormResult : Subject_Recommendator.FormSubjectListView {
         // 필드
         ControlResult ctrl = new ControlResult();     // 제어 객체

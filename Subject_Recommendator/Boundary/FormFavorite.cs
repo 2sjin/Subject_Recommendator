@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 
 namespace Subject_Recommendator {
+    // Boundary 클래스: 교과목 즐겨찾기 Form (FormSubjectlistView의 파생 클래스)
     public partial class FormFavorite : Subject_Recommendator.FormSubjectListView {
         // 필드
         ControlFavorite ctrlFavorite = new ControlFavorite();     // 제어 객체

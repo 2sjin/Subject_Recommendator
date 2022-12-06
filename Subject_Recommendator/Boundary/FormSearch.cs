@@ -3,6 +3,7 @@ using System.Drawing;
 using System.Windows.Forms;
 
 namespace Subject_Recommendator {
+    // Boundary 클래스: 교과목 검색 Form (FormSubjectlistView의 파생 클래스)
     public partial class FormSearch : Subject_Recommendator.FormSubjectListView {
         // 필드
         ControlSearch ctrl = new ControlSearch();     // 제어 객체
@@ -17,8 +18,8 @@ namespace Subject_Recommendator {
 
         // 생성자
         public FormSearch(string mode="") {
-            if (mode == "FAVORITE")
-                isFavoriteAddMode = true;
+            if (mode == "FAVORITE")         // 즐겨찾기 모드로 Form이 실행된 경우
+                isFavoriteAddMode = true;   // 즐겨찾기 모드임을 표시함
             InitializeComponent();
             RefreshListView();
         }
@@ -91,13 +92,13 @@ namespace Subject_Recommendator {
             Search();
         }
 
-        // 검색창에서 [Enter] 키 클릭 시 검색 수행
+        // 메소드: 검색창에서 [Enter] 키 클릭 시 검색 수행
         private void txtSearch_KeyDown(object sender, KeyEventArgs e) {
             if (e.KeyCode == Keys.Enter)
                 Search();
         }
 
-        // 즐겨찾기 추가 버튼 클릭 시 이벤트
+        // 메소드: 즐겨찾기 추가 버튼 클릭 시 이벤트
         private void btnAddFavorite_Click(object sender, EventArgs e) {
             // 즐겨찾기 추가(중복된 연산자 사용)
             try {
@@ -111,27 +112,27 @@ namespace Subject_Recommendator {
                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        // Form이 로드될 때, 콤보박스의 초기 텍스트 설정
+        
+        // 메소드: Form이 로드될 때, 콤보박스의 초기 텍스트 설정
         private void FormSearch_Load(object sender, EventArgs e) {
             comboBox1.Text = "교과목명";
         }
 
-        // 메소드: PlaceHolder 구현: 검색창에 포커싱 되었을 때
+        // 메소드: 검색창에 포커싱 되었을 때(PlaceHolder)
         private void txtSearch_Enter(object sender, EventArgs e) {
-            if (isShowPlaceHolder) {
-                txtSearch.Text = "";
+            if (isShowPlaceHolder) {    // PlaceHolder가 보인다면
+                txtSearch.Text = "";    // PlaceHolder 없앰
                 txtSearch.ForeColor = SystemColors.WindowText;
-                isShowPlaceHolder = false;
+                isShowPlaceHolder = false;  //PlaceHolder가 없다고 표시함
             }
         }
 
-        // 메소드: PlaceHolder 구현: 검색창에서 포커싱 해제가 되었을 때
+        // 메소드: 검색창에서 포커싱 해제가 되었을 때(PlaceHolder)
         private void txtSearch_Leave(object sender, EventArgs e) {
-            if ((isShowPlaceHolder == false) && txtSearch.Text.Equals("")) {
-                txtSearch.Text = "(검색어를 입력하세요)";
+            if ((isShowPlaceHolder == false) && txtSearch.Text.Equals("")) {    // 검색창이 비어있으면
+                txtSearch.Text = "(검색어를 입력하세요)";    // PlaceHolder 출력
                 txtSearch.ForeColor = SystemColors.GrayText;
-                isShowPlaceHolder = true;
+                isShowPlaceHolder = true;       // PlaceHolder가 있다고 표시함
             }
         }
     }

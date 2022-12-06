@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 
 namespace Subject_Recommendator {
+    // Boundary 클래스: 교과목 상세정보 보기 Form
     public partial class FormDetail : Form {
         // 필드
         ControlDetail ctrl;     // 제어 객체

@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 
 namespace Subject_Recommendator {
+    // Boundary 클래스: 교과목 ListView가 있는 Form (상속을 위해 만들어진 Form)
     public partial class FormSubjectListView : Form {
         // 생성자
         public FormSubjectListView() {

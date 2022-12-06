@@ -1,7 +1,7 @@
 ﻿using System.Data.OleDb;
 
 namespace Subject_Recommendator {
-    // 데이터베이스 연결을 위한 제어 클래스(추상 클래스)
+    // Control 클래스: 데이터베이스 연결을 위한 제어 클래스(추상 클래스)
     abstract public class ControlDB {
         // 필드
         string conStr = "Provider=Microsoft.Jet.OLEDB.4.0; Data Source=schema.mdb";
