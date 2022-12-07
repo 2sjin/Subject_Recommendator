@@ -60,12 +60,11 @@ namespace Subject_Recommendator {
                         subject.Year, subject.Term, subject.LectureType, subject.TeamProject);
                     sw.WriteLine();
                 }
-                return null;        // 파일 읽기 성공 시, null 리턴
+                return null;        // 파일 쓰기 성공 시, null 리턴
             } catch (Exception e) {
-                return e.Message;   // 파일 읽기 중 예외 발생 시, 예외 메시지 리턴
+                return e.Message;   // 파일 쓰기 중 예외 발생 시, 예외 메시지 리턴
             } finally {
-                sw.Close();
-                fs.Close();
+                sw.Close(); fs.Close();
             }
         }
     }

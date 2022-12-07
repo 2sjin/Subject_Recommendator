@@ -21,7 +21,7 @@ namespace Subject_Recommendator {
             saveFileDialog = new SaveFileDialog();
             saveFileDialog.Title = "텍스트 파일로 저장";        // 다이얼로그 제목
             saveFileDialog.FileName = "";                      // 다이얼로그가 띄워질 때 초기 파일명은 비워놓음
-            saveFileDialog.InitialDirectory = Application.StartupPath;  // 초기 디렉터리를 exe 파일의 위치로 설정
+            saveFileDialog.InitialDirectory = Application.StartupPath;  // 초기 디렉터리를 exe 파일 위치로
             saveFileDialog.OverwritePrompt = true;          // 파일명 중복 시, 덮어쓸지 묻는 다이얼로그 출력
             saveFileDialog.Filter = "텍스트 파일(*.txt)|*.txt|모든 파일|*.*";    
         }

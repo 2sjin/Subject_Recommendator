@@ -80,7 +80,7 @@ namespace Subject_Recommendator {
 
         // 메소드: 검색 메소드(오버로드(메소드 중복)했던 ctrlFavorite.RefreshData() 메소드 호출)
         private void Search() {
-            if (isShowPlaceHolder)  // PlaceHolder가 보이면, 검색창이 비어 있는 것으로 간주하여 데이터 새로고침
+            if (isShowPlaceHolder)  // PlaceHolder가 보이면, 검색창이 빈 것으로 간주하여 데이터 새로고침
                 ctrl.RefreshData(GetFilterSQL());
             else                    // PlaceHolder가 보이지 않으면, 검색창에 입력한 텍스트를 기반으로 데이터 새로고침
                 ctrl.RefreshData(GetFilterSQL(), comboBox1.Text, txtSearch.Text);
@@ -108,7 +108,7 @@ namespace Subject_Recommendator {
                     this.Close();
                 }
             } catch (ArgumentOutOfRangeException err) {
-                MessageBox.Show("교과목을 선택한 후 [즐겨찾기 추가] 버튼을 눌러주세요.", "교과목 즐겨찾기 추가",
+                MessageBox.Show("교과목 선택 후 [즐겨찾기 추가] 버튼을 눌러주세요.", "교과목 즐겨찾기 추가",
                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }

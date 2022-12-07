@@ -51,7 +51,7 @@ namespace Subject_Recommendator {
                                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 } catch (ArgumentOutOfRangeException err) {
-                    MessageBox.Show("교과목을 선택한 후 [삭제] 버튼을 눌러주세요.", "교과목 즐겨찾기 삭제",
+                    MessageBox.Show("교과목 선택 후 [삭제] 버튼을 눌러주세요.", "교과목 즐겨찾기 삭제",
                                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 } finally {
                     RefreshListView();  // 삭제 반영된 즐겨찾기 목록 새로고침

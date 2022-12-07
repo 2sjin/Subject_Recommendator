@@ -47,17 +47,14 @@ namespace Subject_Recommendator {
         private void linkDeu_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
             Process.Start("https://deu.ac.kr");
         }
-
         // 메소드: 링크 클릭 시, 동의대학교 컴퓨터공학과 홈페이지로 이동
         private void linkDeuCom_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
             Process.Start("https://computer.deu.ac.kr");
         }
-
         // 메소드: 링크 클릭 시, 개발자 Tistory로 이동
         private void linkMyTistory_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
             Process.Start("https://2sjin.tistory.com");
         }
-
         // 메소드: 링크 클릭 시, 게발자 GitHub로 이동
         private void linkMyGithub_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
             Process.Start("https://github.com/2sjin");

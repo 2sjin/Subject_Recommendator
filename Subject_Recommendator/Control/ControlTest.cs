@@ -21,7 +21,7 @@ namespace Subject_Recommendator {
         // 추상 메소드 재정의: 데이터 새로고침 실행
         public override void RefreshData() {
             OpenConnection();
-            reader = ExecuteQuery("SELECT * FROM QUESTION");    // SELECT문 실행(진단검사 문항 모두 조회)
+            reader = ExecuteQuery("SELECT * FROM QUESTION");    // SELECT문 실행(문항 모두 조회)
             RunPostRefreshData();
             CloseConnection();
         }
