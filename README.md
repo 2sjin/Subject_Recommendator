@@ -8,27 +8,14 @@
   - 진단검사를 통해 개인별 성향, 적성 및 관심사를 파악하고, 적절한 교과목을 추천한다.
   - 파일 또는 데이터베이스를 통해 교과목, 추천 결과 등의 데이터를 보존한다.
 
-![image](https://user-images.githubusercontent.com/91407433/220146471-d1366822-bde8-4c1d-abac-1e71fdc59c49.png)
-![image](https://user-images.githubusercontent.com/91407433/220145884-fa67c1d2-c0fc-4a98-936a-657bd607f7c5.png)
-![image](https://user-images.githubusercontent.com/91407433/220145903-403593d8-5278-4d81-97af-89dd25cb3a22.png)
-
 ## 프로젝트 산출물
 [☞ 프로젝트 계획서](https://drive.google.com/file/d/10ypE9gFE2IZSrDmJfvUjOb49rKUROGdH/view?usp=share_link)
 <br>
 [☞ 프로젝트 결과보고서](https://drive.google.com/file/d/14PtY5fbRd3a01LC_b4MWkGK4CTyHMlpJ/view?usp=sharing)
 
-## UML
-<details>
-<summary>유스케이스 다이어그램 보기</summary>
-
-![image](https://user-images.githubusercontent.com/91407433/220146339-ea6c235f-eb73-4478-890f-860e21b42b04.png)
-
-</details>
-
-<details>
-<summary>클래스 다이어그램 보기</summary>
-
-![image](https://user-images.githubusercontent.com/91407433/220146381-6c9553ac-3461-4ad9-80e2-b03cce5f501f.png)
-
-
-</details>
+## 스크린샷
+![image](https://user-images.githubusercontent.com/91407433/220146471-d1366822-bde8-4c1d-abac-1e71fdc59c49.png)
+<br>
+![image](https://user-images.githubusercontent.com/91407433/220145884-fa67c1d2-c0fc-4a98-936a-657bd607f7c5.png)
+<br>
+![image](https://user-images.githubusercontent.com/91407433/220145903-403593d8-5278-4d81-97af-89dd25cb3a22.png)
