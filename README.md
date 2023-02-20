@@ -11,19 +11,21 @@
 ## 프로젝트 설계
 ### 산출물
 [프로젝트 계획서](https://drive.google.com/file/d/10ypE9gFE2IZSrDmJfvUjOb49rKUROGdH/view?usp=share_link)
+<br>
+[프로젝트 결과보고서](https://drive.google.com/file/d/14PtY5fbRd3a01LC_b4MWkGK4CTyHMlpJ/view?usp=sharing)
 
 ### UML
 <details>
 <summary>유스케이스 다이어그램 보기</summary>
 
-![image](https://user-images.githubusercontent.com/91407433/201512993-6808b9e7-73d4-41c9-9344-6715f578d3a6.png)
+![image](https://user-images.githubusercontent.com/91407433/220144569-927e423c-cbf6-4e7c-870e-c3464221dce6.png)
 
 </details>
 
 <details>
 <summary>클래스 다이어그램 보기</summary>
 
-![image](https://user-images.githubusercontent.com/91407433/201513001-19b34f1c-ed7c-4d12-b284-426a736d3f52.png)
+![image](https://user-images.githubusercontent.com/91407433/220144668-e9f23d81-7494-477f-bfe7-cc72f4cd4ee8.png)
 
 
 </details>
