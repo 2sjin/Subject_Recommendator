@@ -9,6 +9,6 @@
   - 파일 또는 데이터베이스를 통해 교과목, 추천 결과 등의 데이터를 보존한다.
 
 ## 프로젝트 산출물
-[프로젝트 계획서](https://drive.google.com/file/d/10ypE9gFE2IZSrDmJfvUjOb49rKUROGdH/view?usp=share_link)
+[☞ 프로젝트 계획서](https://drive.google.com/file/d/10ypE9gFE2IZSrDmJfvUjOb49rKUROGdH/view?usp=share_link)
 <br>
-[프로젝트 결과보고서](https://drive.google.com/file/d/14PtY5fbRd3a01LC_b4MWkGK4CTyHMlpJ/view?usp=sharing)
+[☞ 프로젝트 결과보고서](https://drive.google.com/file/d/14PtY5fbRd3a01LC_b4MWkGK4CTyHMlpJ/view?usp=sharing)
